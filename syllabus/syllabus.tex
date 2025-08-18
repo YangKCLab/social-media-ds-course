@@ -1,0 +1,287 @@
+\documentclass[11pt,article,oneside]{memoir} %{{{
+% based on Kieran Healy's syllabus templates
+% https://github.com/kjhealy/latex-custom-kjh
+\usepackage{booktabs}
+
+\usepackage{org-preamble-pdflatex}
+\usepackage[margin=1.2in]{geometry}
+
+\usepackage{enumitem}
+\setlist{nolistsep}
+
+\setlength{\parskip}{10pt}
+\setlength{\parindent}{0pt}
+
+%}}}
+% Definitions %{{{
+\def\myauthor{Author}
+\def\mytitle{Title}
+\def\mycopyright{\myauthor}
+\def\mykeywords{}
+\def\mybibliostyle{plain}
+\def\mybibliocommand{}
+\def\mysubtitle{}
+\def\myaffiliation{Binghamton University}
+\def\myaddress{\url{https://binghamton.zoom.us/my/yangkc}}
+\def\myemail{yangkc@binghamton.edu}
+\def\myweb{https://www.kaichengyang.me/kaicheng}
+\def\myphone{}
+\def\myversion{}
+\def\myrevision{}
+
+\def\myauthor{Kai-Cheng Yang}
+\def\mykeywords{Social Media, Data Science}
+\def\mysubtitle{Syllabus}
+\def\mytitle{{\normalsize CS 415/515} \\ \HUGE{} Social Media Data Science Pipelines}
+
+%%\chapterstyle{article-3}
+%\pagestyle{kjh}
+
+\def\ind{\hangindent=1 true cm\hangafter=1 \noindent}
+\def\labelitemi{$\cdot$}
+
+\chapterstyle{article-4}  % alternative styles are defined in latex-custom-kjh/needs-memoir/
+
+%}}}
+\begin{document} %{{{
+
+\title{\LARGE \mytitle} %{{{
+\author{\Large\myauthor\newline \footnotesize\texttt{\noindent\myemail}}
+\date{Last updated: \today}
+
+\published{\sffamily Fall 2025}
+
+\maketitle
+
+Instructor: \myauthor \\
+Office: G06A, Engineering Building \\
+Lecture: Tuesday \& Thursday 9:45am - 11:15am \\
+Office hours: Tuesday \& Thursday 11:30am - 12:30pm and by appointment \\
+% {Homepage: \url{https://github.com/yangkc/social-media-ds-course}}
+
+Teaching Assistant: TBD \\
+
+%}}}
+\section{Course Description}%{{{
+
+The focus of this course is on applying data science techniques to large-scale social media.
+The topics covered include large-scale data collection and management, exploratory analysis and measurement techniques, data visualization, hypothesis testing and statistical modeling, and predictive, real-time analytics.
+Students will build an end-to-end analysis pipeline and use it to answer questions about online events as they occur.
+The goal of the class is to provide students with a methodological toolbox, the technical skills to make use of these tools, and the experience of using them on real world data.
+
+%}}}
+
+\section{Credit Hours}
+
+This course is cross-listed as CS 415 and CS 515.
+Both sections are 3 credit hours.
+
+\section{Course Objectives}%{{{
+
+This course is designed to provide a solid foundation and background in performing data science on social media.
+In particular, upon successful completion of this course, you will be able to:
+
+\begin{itemize}
+    \item Build a continuous data system for social media.
+    \item Manage collected data.
+    \item Design and execute various measurements on social media.
+    \item Model and analyze online behavior via social media.
+    \item Create visualizations that help understand social media phenomena.
+\end{itemize}
+
+%}}}
+% \section{Communication} %{{{
+
+% %}}}
+
+\section{Prerequisites and Co-requisites}%{{{
+\label{sec:Prerequisites}
+
+\begin{itemize}
+    \item CS 350 Operating Systems
+    \item CS 375 Design \& Analysis Algorithm
+    \item MATH 327 Probability with Stat Methods or equivalent
+    \item Know at least one programming language well
+\end{itemize}
+
+%}}}
+
+\section{Relationship with ABET}%{{{
+
+\begin{itemize}
+    \item Student Outcome 5 (Function effectively as a member or leader of a team engaged in
+    activities appropriate to the program's discipline): All programming projects are required
+    team projects of 2-3 students.
+    \item Exposure to information management: This course is a designated course for this
+    requirement.
+\end{itemize}
+
+%}}}
+
+\section{Textbook and Reference Books}
+
+Material in this class is delivered via lecture and reading research papers; there is no
+textbook.
+
+\section{Course Format and Topics}
+
+This class combines lectures with research paper reading and discussions.
+
+The lectures will cover the fundamentals of data science on social media.
+The following is a non-exhaustive list of topics that will be covered in the lectures:
+
+\begin{itemize}
+    \item What is Data Science and what does social media have to do with it?
+    \item Data collection
+    \item Social media data formats
+    \item Social media data management with RDBMS/NoSQL
+    \item Applications of probability and statistics, with an emphasis on hypothesis testing.
+    \item Applications of Machine Learning
+    \item Visualization
+\end{itemize}
+
+The reading materials will be recent research papers that are related to the topics covered in the lectures.
+The main topics that will be covered in the reading materials will be:
+
+\begin{itemize}
+    \item Dataset and data collection
+    \item Algorithmic bias
+    \item Inauthentic behaviors
+    \item Ethics and data access
+    \item Generative AI and social media
+\end{itemize}
+
+
+\section{Lecture Notes and Supplemental Materials}
+\begin{itemize}
+    \item Lecture notes will be provided via PDFs or PowerPoints delivered in class.
+    \item All paper reading assignments will be made available via Brightspace.
+\end{itemize}
+
+
+\section{Assignments}
+
+\begin{itemize}
+    \item Paper readings. The best way to start understanding what you can do with data science is
+    to explore the state-of-the art. The best way to do that is to read research papers and that
+    is what we will do in this class. There will be regular paper readings. For each paper,
+    there will potentially be an in-class quiz.
+    It is expected that all students come prepared (i.e., read the paper) and participate in the
+    discussion to the best of their abilities.
+    \item There will be three projects. Each project has three parts: a proposal, an implementation, and a report.
+    Projects are to be completed in groups of 2-3 students.
+\end{itemize}
+
+Important notes about assignments:
+
+\begin{itemize}
+    \item Late assignments may sometimes be accepted with penalty, which will typically be 5\%
+    per day late (including weekends and holidays). We will not accept assignments more
+    than 5 days after the due date unless there is a very compelling reason.
+    \item Programs and the project. Please make an effort to make your programs easy to
+    understand and grade. All programming assignments should have:
+    \begin{itemize}
+        \item An adequate explanation of the design of your program.
+        \begin{itemize}
+            \item You should be prepared to answer good-faith, technical questions asked about
+            your design and implementation during 1:1 sessions with the instructor.
+        \end{itemize}
+        \item Documented code:
+        \begin{itemize}
+            \item Ideally, you use whatever documentation tools are available in the language you
+            decide to implement in, but at minimum, all modules, classes, and functions
+            should have a documentation header that explains what the code does.
+        \end{itemize}
+    \end{itemize}
+    \item Grading disputes, regrading and missing grades.
+    \begin{itemize}
+        \item Should you dispute any grading, please be aware that we will not re-grade any
+single issue you have. Instead, your work will be re-evaluated from scratch. The
+new grade may be higher, lower, or stay the same. This new grade will not be
+changed.
+        \item No regrading can be requested two weeks after the date when graded work is
+        returned to students.
+        \item The scores of your assignments will be made available to you after the
+assignments are graded.
+    \end{itemize}
+\end{itemize}
+
+\section{Method of Assessment}%{{{
+
+The following percentage weights will be used to assess student work:
+
+\begin{itemize}
+    \item Paper reading quizzes are worth 15\%.
+    \item Three programming assignments (projects) 85\% split evenly across all three projects.
+    % \item Any group containing graduate student groups will have additional requirements for each project.
+\end{itemize}
+
+
+%}}}
+
+\section{Grading Determination}\label{sec:grading_tentative_}%{{{
+
+Your final grade for this course is largely based on your performance relative to the performance
+of other students in the class. In other words, if your work is consistently better than average, you
+are likely to receive an A.
+The specific break down of grades is:
+
+\begin{itemize}
+    \item A: 100--90
+    \item B: 89--80
+    \item C: 79--70
+    \item D: 69--60
+    \item F: 59--0
+\end{itemize}
+
+\section{Academic Honesty Expectations and Violation Penalty}
+
+\begin{itemize}
+    \item Cheating on quizzes of any kind, including, but not limited to, the use of electronic devices, ``cheat sheets,'' or looking at another student's quiz are considered instances of cheating and will be reported as Category 1 academic dishonesty violation. You will also receive a one letter grade deduction (e.g., from A to B). More than one incident of cheating of any kind will result in an F for the entire course.
+    \item The use of generative AI (e.g., ChatGPT) is strictly prohibited in this class. Any use of generative AI will be considered cheating. This includes using it for summarizing papers, writing code, and writing reports. Any use of Generative AI will result in a grade of ZERO for the entire project. You will also be reported for a Category 1 academic honestly violation. More than one incident of cheating of any kind will result in an F for the entire course.
+    \item Computer science faculty at Binghamton wrote a letter to all computer science students about the importance of academic honesty. This letter is available from this course's Brightspace page.
+    \item Please review the academic honesty document and make sure that you understand it! The link is at: \url{http://www.binghamton.edu/watson/about/honesty-policy.pdf}.
+    \item Each assignment must include the following statement:
+    \begin{quote}
+        ``We have done this assignment completely on our own. We have not copied it, nor have we given my solution to anyone else. We understand that if we are involved in plagiarism or cheating we will have to sign an official form that we have cheated and that this form will be stored in my official university record. We also understand that we will receive a grade of 0 for the involved assignment and our grade will be reduced by at least one level (e.g., from A to B) for my/our offense, and that we will receive a grade of ``F'' for the course for any additional offense of any kind.''
+    \end{quote}
+    \item For this course, programming assignments (projects) are all team projects. Certain open- source tools/software are permitted to be used (see the description of each project for details). Used open-source tools/software must be clearly acknowledged in the submitted project report.
+    \item Additionally, each project submission must include a statement of contribution, which describes which group members did what part of the assignment.
+    % \item Your assignments will not be graded unless the statement above is present and is followed by your signature.
+\end{itemize}
+
+
+\section{Generative AI policy}
+
+Use of Generative AI is strictly prohibited in this class for all assignments.
+Any use of Generative AI will result in a grade of ZERO for the entire project.
+In other words, the best grade you will be able to get in this class is a 72\%.
+
+\section{Managing Stress}
+
+If you are having any issues with personal or academic stress at any time during the semester, I encourage you to seek support.
+I do care about your wellbeing, and if my class becomes a pain point for you, you should feel free to reach out; I'm available to talk.
+Additionally, a wide range of campus resources are available to provide help, including:
+\begin{itemize}
+    \item Dean of Students Office: 607-777-2804
+    \item University Counseling Center: 607-777-2772
+    \item Interpersonal Violence Prevention: 607-777-3062
+    \item Office of International Student \& Scholar Services: 607-777-2510
+\end{itemize}
+
+\section{Class Attendance Requirement}
+
+Attendance is required and attendance will be checked regularly.
+If you are not present when attendance was checked it will be counted as missing the class.
+Showing up late is considered missing the class.
+
+\section{Communication}
+
+Students will be required to use their Binghamton email address.
+There will be no response to emails from domains other than binghamton.edu!
+A best effort will be made to respond to student emails within two business days of being sent.
+In other words, don't assume an email sent a few hours before something is due will be answered before the due date; plan ahead!
+
+
+\end{document} %}}}
+%}}}
