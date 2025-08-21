@@ -22,7 +22,6 @@ import { RouterLink, RouterView } from 'vue-router'
           <li class="nav-item"><RouterLink class="nav-link" to="/schedule">Schedule</RouterLink></li>
           <li class="nav-item"><RouterLink class="nav-link" to="/resources">Resources</RouterLink></li>
           <li class="nav-item"><RouterLink class="nav-link" to="/staff">Staff</RouterLink></li>
-          <li class="nav-item"><a class="nav-link" href="#policies">Policies</a></li>
         </ul>
       </nav>
     </div>
