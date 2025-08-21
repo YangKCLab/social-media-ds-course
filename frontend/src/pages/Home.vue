@@ -15,7 +15,7 @@
     </section>
 
     <section class="row gy-3 mb-5">
-      <div class="col-md-6">
+      <div class="col-md-12">
         <div class="card h-100">
           <div class="card-body">
             <h5 class="card-title" id="schedule">Time and Place</h5>
@@ -24,19 +24,6 @@
               <li>Tuesdays & Thursdays 9:45am–11:15am</li>
               <li>Location: Engineering Building (room TBA)</li>
               <li>First day: per university calendar</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-6">
-        <div class="card h-100">
-          <div class="card-body">
-            <h5 class="card-title" id="staff">Staff</h5>
-            <ul class="mb-0">
-              <li>Instructor: <a href="https://www.kaichengyang.me/kaicheng" target="_blank" rel="noopener">Kai-Cheng Yang</a> (<a href="mailto:yangkc@binghamton.edu">yangkc@binghamton.edu</a>)</li>
-              <li>Office: G06A, Engineering Building</li>
-              <li>Office Hours: Tue 12:30–2:30pm and by appointment</li>
-              <li>TA: TBD</li>
             </ul>
           </div>
         </div>
@@ -106,4 +93,3 @@ main {
   margin-bottom: 0.5rem;
 }
 </style>
-
