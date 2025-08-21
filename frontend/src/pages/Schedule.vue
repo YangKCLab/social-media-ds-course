@@ -47,6 +47,26 @@ const projectLabel = (row) => {
   return n ? `P${n}` : e
 }
 
+// Determine badge color based on project number
+const projectBadgeClass = (row) => {
+  if (!row || typeof row !== 'object') return 'text-bg-info'
+  const entries = Object.entries(row)
+  if (row.project && typeof row.project === 'object') {
+    entries.push(...Object.entries(row.project))
+  }
+  const norm = (k) => String(k).toLowerCase().replace(/[\s_-]+/g, '')
+  const map = new Map(entries.map(([k, v]) => [norm(k), v]))
+  const numRaw = map.get('projectnumber') ?? map.get('projectno') ?? map.get('p') ?? map.get('pnum')
+  const n = String(numRaw ?? '').trim()
+  switch (n) {
+    case '1': return 'text-bg-primary'
+    case '2': return 'text-bg-success'
+    case '3': return 'text-bg-warning'
+    case '4': return 'text-bg-danger'
+    default: return 'text-bg-info'
+  }
+}
+
 // Utilities to detect past dates (relative to local today)
 const parseMDY = (mdy) => {
   if (!mdy) return null
@@ -128,7 +148,7 @@ const isPast = (row) => {
             </td>
             <td>
               <template v-if="projectLabel(row)">
-                <span class="badge text-bg-info">{{ projectLabel(row) }}</span>
+                <span class="badge" :class="projectBadgeClass(row)">{{ projectLabel(row) }}</span>
               </template>
             </td>
           </tr>
