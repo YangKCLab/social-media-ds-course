@@ -41,12 +41,13 @@ const isNoReading = (topic) => /^no\s*reading$/i.test((topic || '').trim())
             <th scope="col" style="white-space:nowrap">Date</th>
             <th scope="col">Lecture Topic</th>
             <th scope="col">Reading Topic</th>
+            <th scope="col" style="white-space:nowrap">Projects</th>
             <th scope="col" style="min-width:220px">Reading Materials</th>
           </tr>
         </thead>
         <tbody v-for="group in weekGroups" :key="'w'+group.week">
           <tr class="table-secondary week-header">
-            <th colspan="4">Week {{ group.week }}</th>
+            <th colspan="5">Week {{ group.week }}</th>
           </tr>
           <tr v-for="row in group.items" :key="row.week + '-' + row.date">
             <td style="white-space:nowrap">{{ row.date }}</td>
@@ -65,6 +66,11 @@ const isNoReading = (topic) => /^no\s*reading$/i.test((topic || '').trim())
               </template>
               <template v-else>
                 {{ row.readingTopic }}
+              </template>
+            </td>
+            <td>
+              <template v-if="row.project">
+                <span class="badge text-bg-info">{{ row.project }}</span>
               </template>
             </td>
             <td>
