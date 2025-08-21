@@ -19,10 +19,8 @@ import { RouterLink, RouterView } from 'vue-router'
       </button>
       <nav id="navbarNav" class="collapse navbar-collapse">
         <ul class="navbar-nav ms-auto">
-          <li class="nav-item"><a class="nav-link" href="#description">Description</a></li>
           <li class="nav-item"><RouterLink class="nav-link" to="/schedule">Schedule</RouterLink></li>
           <li class="nav-item"><RouterLink class="nav-link" to="/resources">Resources</RouterLink></li>
-          <li class="nav-item"><a class="nav-link" href="#grading">Grading</a></li>
           <li class="nav-item"><a class="nav-link" href="#policies">Policies</a></li>
         </ul>
       </nav>
