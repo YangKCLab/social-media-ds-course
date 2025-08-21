@@ -21,9 +21,8 @@
             <h5 class="card-title" id="schedule">Time and Place</h5>
             <ul class="mb-0">
               <li>Fall 2025</li>
-              <li>Tuesdays & Thursdays 9:45am–11:15am</li>
-              <li>Location: Engineering Building (room TBA)</li>
-              <li>First day: per university calendar</li>
+              <li>Tuesdays & Thursdays 9:45am-11:15am</li>
+              <li>Location: Library North (LN) G412</li>
             </ul>
           </div>
         </div>
