@@ -27,6 +27,7 @@ const weekGroups = computed(() => {
 const isNoClass = (topic) => /^\s*No class/i.test(topic || '')
 const lectureRemainder = (topic) => (topic || '').replace(/^\s*No class\s*/i, '').trim()
 const isNoReading = (topic) => /^no\s*reading$/i.test((topic || '').trim())
+const isEmpty = (s) => !(s && String(s).trim())
 </script>
 
 <template>
@@ -55,6 +56,9 @@ const isNoReading = (topic) => /^no\s*reading$/i.test((topic || '').trim())
               <template v-if="isNoClass(row.lectureTopic)">
                 <span class="badge text-bg-secondary me-2">No class</span>
                 <span v-if="lectureRemainder(row.lectureTopic)">{{ lectureRemainder(row.lectureTopic) }}</span>
+              </template>
+              <template v-else-if="isEmpty(row.lectureTopic)">
+                <span class="badge text-bg-warning">TBD</span>
               </template>
               <template v-else>
                 {{ row.lectureTopic }}
