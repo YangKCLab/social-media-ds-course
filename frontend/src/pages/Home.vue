@@ -64,17 +64,6 @@
       </ul>
     </section>
 
-    <section class="mb-5" id="policies">
-      <h3>Policies (Summary)</h3>
-      <ul>
-        <li>Programming assignments are team projects (2–3 students).</li>
-        <li>Generative AI tools are allowed with guidelines; violations count as academic dishonesty.</li>
-        <li>Late assignments may be accepted with a typical 5% penalty; see full syllabus for details.</li>
-        <li>See Binghamton SoC academic honesty policy and course syllabus for full details.</li>
-      </ul>
-      <p class="text-muted small">Refer to the LaTeX syllabus in this repository for the authoritative and complete policy text.</p>
-    </section>
-
     <footer class="text-center text-muted">
       <hr />
       <div>Last updated {{ new Date().toLocaleDateString() }}.</div>
