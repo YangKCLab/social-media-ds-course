@@ -1,8 +1,3 @@
 [
-  { "title": "Syllabus (PDF)", "href": "https://github.com/YangKCLab/social-media-ds-course/tree/main/syllabus" },
-  { "title": "University Brightspace", "href": "#" },
-  { "title": "Python", "href": "https://www.python.org/" },
-  { "title": "Pandas", "href": "https://pandas.pydata.org/" },
-  { "title": "Matplotlib", "href": "https://matplotlib.org/" }
+  { "title": "Syllabus (PDF)", "href": "https://github.com/YangKCLab/social-media-ds-course/tree/main/syllabus" }
 ]
-
