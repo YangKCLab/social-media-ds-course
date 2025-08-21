@@ -1,29 +1,22 @@
-# Frontend
+# Frontend — Course Page (Vue + Vite)
 
-This folder contains the frontend code for the project.
+This directory contains a simple Vue 3 + Vite app for the course website.
+The landing page (`src/App.vue`) is modeled after the AI Agents course template and customized for
+CS 415/515 Social Media Data Science Pipelines.
 
+## Scripts
 
-## Specifications
+- `npm run dev` — Start dev server.
+- `npm run build` — Build for production (`dist/`).
+- `npm run preview` — Preview the production build locally.
 
-- Vue 3 + Vite web application
-- Styling: Tailwind CSS + DaisyUI
+## Structure
 
-## Local project setup
+- `index.html` — App shell, loads Bootstrap 5 from CDN.
+- `src/App.vue` — Main course page content and sections.
+- `src/style.css` — Minimal global styles (Bootstrap handles most layout).
 
-```sh
-npm install
-```
+## Notes
 
-### Compile and Hot-Reload for Development
-
-```sh
-npm run dev
-```
-
-### Compile and Minify for Production
-
-```sh
-npm run build
-```
-
-Note that a GitHub workflow has been set up so that every time changes are made on the main branch, the frontend will be automatically compiled and deployed.
+- Source of truth for detailed policies remains the LaTeX syllabus in `../syllabus/`.
+- If deploying to GitHub Pages under a subpath, configure `base` in `vite.config.js`.
