@@ -28,6 +28,25 @@ const isNoClass = (topic) => /^\s*No class/i.test(topic || '')
 const lectureRemainder = (topic) => (topic || '').replace(/^\s*No class\s*/i, '').trim()
 const isNoReading = (topic) => /^no\s*reading$/i.test((topic || '').trim())
 const isEmpty = (s) => !(s && String(s).trim())
+
+// Utilities to detect past dates (relative to local today)
+const parseMDY = (mdy) => {
+  if (!mdy) return null
+  const parts = String(mdy).split('/')
+  if (parts.length !== 3) return null
+  const [m, d, y] = parts.map((p) => Number(p))
+  if (!m || !d || !y) return null
+  return new Date(y, m - 1, d)
+}
+const startOfToday = () => {
+  const t = new Date()
+  return new Date(t.getFullYear(), t.getMonth(), t.getDate())
+}
+const isPast = (row) => {
+  const dt = parseMDY(row?.date)
+  if (!dt) return false
+  return dt < startOfToday()
+}
 </script>
 
 <template>
@@ -50,7 +69,11 @@ const isEmpty = (s) => !(s && String(s).trim())
           <tr class="table-secondary week-header">
             <th colspan="5">Week {{ group.week }}</th>
           </tr>
-          <tr v-for="row in group.items" :key="row.week + '-' + row.date">
+          <tr
+            v-for="row in group.items"
+            :key="row.week + '-' + row.date"
+            :class="{ 'past-row': isPast(row) || isNoClass(row.lectureTopic) }"
+          >
             <td style="white-space:nowrap">{{ row.date }}</td>
             <td>
               <template v-if="isNoClass(row.lectureTopic)">
@@ -103,5 +126,12 @@ td, th {
 }
 .week-header th {
   font-weight: 600;
+}
+.past-row {
+  opacity: 0.7;
+}
+.past-row td,
+.past-row th {
+  color: #6c757d; /* Bootstrap gray-600 */
 }
 </style>
