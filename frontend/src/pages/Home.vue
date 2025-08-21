@@ -14,20 +14,6 @@
       </p>
     </section>
 
-    <section class="mb-5">
-      <h3>Course Objectives</h3>
-      <p>
-        Upon successful completion of this course, you will be able to:
-      </p>
-      <ul>
-        <li>Build a continuous data system for social media.</li>
-        <li>Manage collected data.</li>
-        <li>Design and execute various measurements on social media.</li>
-        <li>Model and analyze online behavior via social media.</li>
-        <li>Create visualizations that help understand social media phenomena.</li>
-      </ul>
-    </section>
-
     <section class="row gy-3 mb-5">
       <div class="col-md-12">
         <div class="card h-100">
@@ -44,12 +30,17 @@
     </section>
 
     <section class="mb-5">
-      <h3 id="materials">Course Materials</h3>
+      <h3>Course Objectives</h3>
       <p>
-        There is no textbook for this course.
-        Lectures and selected research papers form the core materials.
-        Paper reading assignments and other course materials will be made available via Brightspace.
+        Upon successful completion of this course, you will be able to:
       </p>
+      <ul>
+        <li>Build a continuous data system for social media.</li>
+        <li>Manage collected data.</li>
+        <li>Design and execute various measurements on social media.</li>
+        <li>Model and analyze online behavior via social media.</li>
+        <li>Create visualizations that help understand social media phenomena.</li>
+      </ul>
     </section>
 
     <section class="mb-5">
@@ -64,6 +55,19 @@
         >
           View Syllabus
         </a>
+      </p>
+      <p>
+        The syllabus is subject to change, so please check it regularly for updates.
+      </p>
+    </section>
+
+
+    <section class="mb-5">
+      <h3 id="materials">Course Materials</h3>
+      <p>
+        There is no textbook for this course.
+        Lectures and selected research papers form the core materials.
+        Paper reading assignments and other course materials will be made available via Brightspace.
       </p>
     </section>
 
