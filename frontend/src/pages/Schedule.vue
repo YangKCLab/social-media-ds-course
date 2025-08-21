@@ -34,7 +34,6 @@ const weekGroups = computed(() => {
       <table class="table table-striped table-hover align-middle">
         <thead class="table-light">
           <tr>
-            <th scope="col" style="white-space:nowrap">Week</th>
             <th scope="col" style="white-space:nowrap">Date</th>
             <th scope="col">Lecture Topic</th>
             <th scope="col">Reading Topic</th>
@@ -43,10 +42,9 @@ const weekGroups = computed(() => {
         </thead>
         <tbody v-for="group in weekGroups" :key="'w'+group.week">
           <tr class="table-secondary week-header">
-            <th colspan="5">Week {{ group.week }}</th>
+            <th colspan="4">Week {{ group.week }}</th>
           </tr>
           <tr v-for="row in group.items" :key="row.week + '-' + row.date">
-            <td class="text-muted" style="white-space:nowrap">{{ row.week }}</td>
             <td style="white-space:nowrap">{{ row.date }}</td>
             <td>
               <span v-if="/^\s*No class/i.test(row.lectureTopic)" class="badge text-bg-secondary me-2">No class</span>
