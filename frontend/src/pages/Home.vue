@@ -53,17 +53,34 @@
     </section>
 
     <section class="mb-5">
+      <h3 id="syllabus">Syllabus</h3>
+      <p>
+        Download the most up-to-date syllabus (PDF):
+        <a
+          class="btn btn-outline-primary btn-sm ms-1"
+          href="https://github.com/YangKCLab/social-media-ds-course/blob/main/syllabus/syllabus.pdf"
+          target="_blank"
+          rel="noopener"
+        >
+          View Syllabus
+        </a>
+      </p>
+    </section>
+
+    <section class="mb-5">
       <h3>Course Format and Topics</h3>
       <p>
         This class combines lectures with research paper reading and discussions. The lectures cover
         the fundamentals of data science on social media. Reading materials are recent research papers
         aligned with lecture topics.
+
+        Please refer to <router-link to="/schedule">Schedule</router-link> for the detailed lecture topics and reading materials.
       </p>
       <div class="row g-3">
         <div class="col-md-6">
           <div class="card h-100">
             <div class="card-body">
-              <h6 class="card-title">Lecture Topics (sample)</h6>
+              <h6 class="card-title">Lecture Topics</h6>
               <ul class="mb-0">
                 <li>What is Data Science and what does social media have to do with it?</li>
                 <li>Data collection</li>
@@ -79,7 +96,7 @@
         <div class="col-md-6">
           <div class="card h-100">
             <div class="card-body">
-              <h6 class="card-title">Reading Topics (sample)</h6>
+              <h6 class="card-title">Reading Topics</h6>
               <ul class="mb-0">
                 <li>Dataset and data collection</li>
                 <li>Algorithmic bias</li>
