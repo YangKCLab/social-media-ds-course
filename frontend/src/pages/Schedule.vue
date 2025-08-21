@@ -76,8 +76,8 @@ const isNoReading = (topic) => /^no\s*reading$/i.test((topic || '').trim())
                 </ul>
               </template>
               <template v-else>
-                <span v-if="/^no\s*reading$/i.test(row.readingTopic || '')" class="badge text-bg-secondary">No reading</span>
-                <span v-else class="badge text-bg-warning">TBD</span>
+                <!-- Leave empty when there is no reading that day; otherwise show TBD -->
+                <span v-if="!isNoReading(row.readingTopic)" class="badge text-bg-warning">TBD</span>
               </template>
             </td>
           </tr>
