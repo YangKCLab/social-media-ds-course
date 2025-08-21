@@ -32,8 +32,9 @@
     <section class="mb-5">
       <h3 id="materials">Course Materials</h3>
       <p>
-        There is no textbook. Lectures and selected research papers form the core materials.
-        Paper reading assignments will be made available via Brightspace.
+        There is no textbook for this course.
+        Lectures and selected research papers form the core materials.
+        Paper reading assignments and other course materials will be made available via Brightspace.
       </p>
     </section>
 
