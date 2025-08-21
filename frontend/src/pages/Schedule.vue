@@ -41,8 +41,8 @@ const isNoReading = (topic) => /^no\s*reading$/i.test((topic || '').trim())
             <th scope="col" style="white-space:nowrap">Date</th>
             <th scope="col">Lecture Topic</th>
             <th scope="col">Reading Topic</th>
-            <th scope="col" style="white-space:nowrap">Projects</th>
             <th scope="col" style="min-width:220px">Reading Materials</th>
+            <th scope="col" style="white-space:nowrap">Projects</th>
           </tr>
         </thead>
         <tbody v-for="group in weekGroups" :key="'w'+group.week">
@@ -69,11 +69,6 @@ const isNoReading = (topic) => /^no\s*reading$/i.test((topic || '').trim())
               </template>
             </td>
             <td>
-              <template v-if="row.project">
-                <span class="badge text-bg-info">{{ row.project }}</span>
-              </template>
-            </td>
-            <td>
               <template v-if="row.materials && row.materials.length">
                 <ul class="mb-0 ps-3">
                   <li v-for="m in row.materials" :key="m.title">
@@ -84,6 +79,11 @@ const isNoReading = (topic) => /^no\s*reading$/i.test((topic || '').trim())
               <template v-else>
                 <!-- Leave empty when there is no reading that day; otherwise show TBD -->
                 <span v-if="!isNoReading(row.readingTopic)" class="badge text-bg-warning">TBD</span>
+              </template>
+            </td>
+            <td>
+              <template v-if="row.project">
+                <span class="badge text-bg-info">{{ row.project }}</span>
               </template>
             </td>
           </tr>
