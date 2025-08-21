@@ -15,28 +15,14 @@
     </section>
 
     <section class="row gy-3 mb-5">
-      <div class="col-md-6">
+      <div class="col-md-12">
         <div class="card h-100">
           <div class="card-body">
             <h5 class="card-title" id="schedule">Time and Place</h5>
             <ul class="mb-0">
               <li>Fall 2025</li>
-              <li>Tuesdays & Thursdays 9:45am–11:15am</li>
-              <li>Location: Engineering Building (room TBA)</li>
-              <li>First day: per university calendar</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-6">
-        <div class="card h-100">
-          <div class="card-body">
-            <h5 class="card-title" id="staff">Staff</h5>
-            <ul class="mb-0">
-              <li>Instructor: <a href="https://www.kaichengyang.me/kaicheng" target="_blank" rel="noopener">Kai-Cheng Yang</a> (<a href="mailto:yangkc@binghamton.edu">yangkc@binghamton.edu</a>)</li>
-              <li>Office: G06A, Engineering Building</li>
-              <li>Office Hours: Tue 12:30–2:30pm and by appointment</li>
-              <li>TA: TBD</li>
+              <li>Tuesdays & Thursdays 9:45am-11:15am</li>
+              <li>Location: Library North (LN) G412</li>
             </ul>
           </div>
         </div>
@@ -44,11 +30,88 @@
     </section>
 
     <section class="mb-5">
+      <h3>Course Objectives</h3>
+      <p>
+        Upon successful completion of this course, you will be able to:
+      </p>
+      <ul>
+        <li>Build a continuous data system for social media.</li>
+        <li>Manage collected data.</li>
+        <li>Design and execute various measurements on social media.</li>
+        <li>Model and analyze online behavior via social media.</li>
+        <li>Create visualizations that help understand social media phenomena.</li>
+      </ul>
+    </section>
+
+    <section class="mb-5">
+      <h3 id="syllabus">Syllabus</h3>
+      <p>
+        Download the most up-to-date syllabus (PDF):
+        <a
+          class="btn btn-outline-primary btn-sm ms-1"
+          href="https://github.com/YangKCLab/social-media-ds-course/blob/main/syllabus/syllabus.pdf"
+          target="_blank"
+          rel="noopener"
+        >
+          View Syllabus
+        </a>
+      </p>
+      <p>
+        The syllabus is subject to change, so please check it regularly for updates.
+      </p>
+    </section>
+
+
+    <section class="mb-5">
       <h3 id="materials">Course Materials</h3>
       <p>
-        There is no textbook. Lectures and selected research papers form the core materials.
-        Paper reading assignments will be made available via Brightspace.
+        There is no textbook for this course.
+        Lectures and selected research papers form the core materials.
+        Paper reading assignments and other course materials will be made available via Brightspace.
       </p>
+    </section>
+
+    <section class="mb-5">
+      <h3>Course Format and Topics</h3>
+      <p>
+        This class combines lectures with research paper reading and discussions. The lectures cover
+        the fundamentals of data science on social media. Reading materials are recent research papers
+        aligned with lecture topics.
+
+        Please refer to <router-link to="/schedule">Schedule</router-link> for the detailed lecture topics and reading materials.
+      </p>
+      <div class="row g-3">
+        <div class="col-md-6">
+          <div class="card h-100">
+            <div class="card-body">
+              <h6 class="card-title">Lecture Topics</h6>
+              <ul class="mb-0">
+                <li>What is Data Science and what does social media have to do with it?</li>
+                <li>Data collection</li>
+                <li>Social media data formats</li>
+                <li>Data management with RDBMS/NoSQL</li>
+                <li>Probability and statistics; hypothesis testing</li>
+                <li>Applications of Machine Learning</li>
+                <li>Visualization</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="card h-100">
+            <div class="card-body">
+              <h6 class="card-title">Reading Topics</h6>
+              <ul class="mb-0">
+                <li>Dataset and data collection</li>
+                <li>Algorithmic bias</li>
+                <li>Inauthentic behaviors</li>
+                <li>Ethics and data access</li>
+                <li>Generative AI and social media</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
 
     <section class="mb-5">
@@ -77,17 +140,6 @@
       </ul>
     </section>
 
-    <section class="mb-5" id="policies">
-      <h3>Policies (Summary)</h3>
-      <ul>
-        <li>Programming assignments are team projects (2–3 students).</li>
-        <li>Generative AI tools are allowed with guidelines; violations count as academic dishonesty.</li>
-        <li>Late assignments may be accepted with a typical 5% penalty; see full syllabus for details.</li>
-        <li>See Binghamton SoC academic honesty policy and course syllabus for full details.</li>
-      </ul>
-      <p class="text-muted small">Refer to the LaTeX syllabus in this repository for the authoritative and complete policy text.</p>
-    </section>
-
     <footer class="text-center text-muted">
       <hr />
       <div>Last updated {{ new Date().toLocaleDateString() }}.</div>
@@ -106,4 +158,3 @@ main {
   margin-bottom: 0.5rem;
 }
 </style>
-

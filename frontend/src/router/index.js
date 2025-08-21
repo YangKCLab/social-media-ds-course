@@ -3,6 +3,7 @@ import { createRouter, createWebHistory } from 'vue-router'
 import Home from '../pages/Home.vue'
 import Schedule from '../pages/Schedule.vue'
 import Resources from '../pages/Resources.vue'
+import Staff from '../pages/Staff.vue'
 
 export const router = createRouter({
   // Use history mode with Vite base for GH Pages
@@ -11,6 +12,7 @@ export const router = createRouter({
     { path: '/', name: 'home', component: Home },
     { path: '/schedule', name: 'schedule', component: Schedule },
     { path: '/resources', name: 'resources', component: Resources },
+    { path: '/staff', name: 'staff', component: Staff },
   ],
   scrollBehavior(to, from, saved) {
     if (saved) return saved
