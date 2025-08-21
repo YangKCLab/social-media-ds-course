@@ -1,5 +1,5 @@
 <script setup>
-import { ref, onMounted } from 'vue'
+import { ref, onMounted, computed } from 'vue'
 
 const schedule = ref([])
 
@@ -12,6 +12,16 @@ onMounted(async () => {
     console.error('Failed to load schedule.json', e)
     schedule.value = []
   }
+})
+
+const weekGroups = computed(() => {
+  const map = new Map()
+  for (const row of schedule.value) {
+    const key = row.week ?? '—'
+    if (!map.has(key)) map.set(key, [])
+    map.get(key).push(row)
+  }
+  return Array.from(map.entries()).map(([week, items]) => ({ week, items }))
 })
 </script>
 
@@ -31,12 +41,21 @@ onMounted(async () => {
             <th scope="col" style="min-width:220px">Reading Materials</th>
           </tr>
         </thead>
-        <tbody>
-          <tr v-for="row in schedule" :key="row.week + '-' + row.date">
-            <th scope="row">{{ row.week }}</th>
-            <td>{{ row.date }}</td>
-            <td>{{ row.lectureTopic }}</td>
-            <td>{{ row.readingTopic }}</td>
+        <tbody v-for="group in weekGroups" :key="'w'+group.week">
+          <tr class="table-secondary week-header">
+            <th colspan="5">Week {{ group.week }}</th>
+          </tr>
+          <tr v-for="row in group.items" :key="row.week + '-' + row.date">
+            <td class="text-muted" style="white-space:nowrap">{{ row.week }}</td>
+            <td style="white-space:nowrap">{{ row.date }}</td>
+            <td>
+              <span v-if="/^\s*No class/i.test(row.lectureTopic)" class="badge text-bg-secondary me-2">No class</span>
+              {{ row.lectureTopic }}
+            </td>
+            <td>
+              <span v-if="/^no\s*reading$/i.test(row.readingTopic || '')" class="badge text-bg-secondary me-2">No reading</span>
+              {{ row.readingTopic }}
+            </td>
             <td>
               <template v-if="row.materials && row.materials.length">
                 <ul class="mb-0 ps-3">
@@ -45,7 +64,10 @@ onMounted(async () => {
                   </li>
                 </ul>
               </template>
-              <span v-else class="text-muted">{{ /^no\s*reading$/i.test(row.readingTopic || '') ? 'No reading' : 'TBD' }}</span>
+              <template v-else>
+                <span v-if="/^no\s*reading$/i.test(row.readingTopic || '')" class="badge text-bg-secondary">No reading</span>
+                <span v-else class="badge text-bg-warning">TBD</span>
+              </template>
             </td>
           </tr>
         </tbody>
@@ -57,5 +79,8 @@ onMounted(async () => {
 <style scoped>
 td, th {
   vertical-align: top;
+}
+.week-header th {
+  font-weight: 600;
 }
 </style>
