@@ -23,6 +23,10 @@ const weekGroups = computed(() => {
   }
   return Array.from(map.entries()).map(([week, items]) => ({ week, items }))
 })
+
+const isNoClass = (topic) => /^\s*No class/i.test(topic || '')
+const lectureRemainder = (topic) => (topic || '').replace(/^\s*No class\s*/i, '').trim()
+const isNoReading = (topic) => /^no\s*reading$/i.test((topic || '').trim())
 </script>
 
 <template>
@@ -47,12 +51,21 @@ const weekGroups = computed(() => {
           <tr v-for="row in group.items" :key="row.week + '-' + row.date">
             <td style="white-space:nowrap">{{ row.date }}</td>
             <td>
-              <span v-if="/^\s*No class/i.test(row.lectureTopic)" class="badge text-bg-secondary me-2">No class</span>
-              {{ row.lectureTopic }}
+              <template v-if="isNoClass(row.lectureTopic)">
+                <span class="badge text-bg-secondary me-2">No class</span>
+                <span v-if="lectureRemainder(row.lectureTopic)">{{ lectureRemainder(row.lectureTopic) }}</span>
+              </template>
+              <template v-else>
+                {{ row.lectureTopic }}
+              </template>
             </td>
             <td>
-              <span v-if="/^no\s*reading$/i.test(row.readingTopic || '')" class="badge text-bg-secondary me-2">No reading</span>
-              {{ row.readingTopic }}
+              <template v-if="isNoReading(row.readingTopic)">
+                <span class="badge text-bg-secondary">No reading</span>
+              </template>
+              <template v-else>
+                {{ row.readingTopic }}
+              </template>
             </td>
             <td>
               <template v-if="row.materials && row.materials.length">
