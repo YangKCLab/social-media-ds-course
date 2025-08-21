@@ -28,12 +28,20 @@ const isNoClass = (topic) => /^\s*No class/i.test(topic || '')
 const lectureRemainder = (topic) => (topic || '').replace(/^\s*No class\s*/i, '').trim()
 const isNoReading = (topic) => /^no\s*reading$/i.test((topic || '').trim())
 const isEmpty = (s) => !(s && String(s).trim())
-// Compose a project badge label from schedule.json fields
+// Compose a project badge label from schedule.json fields (robust to key names)
 const projectLabel = (row) => {
-  const num = row?.['project number'] ?? row?.projectNumber ?? row?.project_number
-  const ev = (row?.event ?? row?.projectEvent ?? row?.project_event) || ''
+  if (!row || typeof row !== 'object') return ''
+  const entries = Object.entries(row)
+  if (row.project && typeof row.project === 'object') {
+    entries.push(...Object.entries(row.project))
+  }
+  const norm = (k) => String(k).toLowerCase().replace(/[\s_-]+/g, '')
+  const map = new Map(entries.map(([k, v]) => [norm(k), v]))
+
+  const num = map.get('projectnumber') ?? map.get('projectno') ?? map.get('p') ?? map.get('pnum')
+  const ev = map.get('event') ?? map.get('projectevent') ?? map.get('milestone') ?? ''
   const n = (num !== undefined && num !== null && String(num).trim() !== '') ? String(num).trim() : ''
-  const e = String(ev).trim()
+  const e = String(ev || '').trim()
   if (!n && !e) return ''
   if (n && e) return `P${n}: ${e}`
   return n ? `P${n}` : e
