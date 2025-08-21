@@ -14,6 +14,20 @@
       </p>
     </section>
 
+    <section class="mb-5">
+      <h3>Course Objectives</h3>
+      <p>
+        Upon successful completion of this course, you will be able to:
+      </p>
+      <ul>
+        <li>Build a continuous data system for social media.</li>
+        <li>Manage collected data.</li>
+        <li>Design and execute various measurements on social media.</li>
+        <li>Model and analyze online behavior via social media.</li>
+        <li>Create visualizations that help understand social media phenomena.</li>
+      </ul>
+    </section>
+
     <section class="row gy-3 mb-5">
       <div class="col-md-12">
         <div class="card h-100">
