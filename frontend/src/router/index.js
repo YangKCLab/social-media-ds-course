@@ -1,11 +1,12 @@
-import { createRouter, createWebHashHistory } from 'vue-router'
+import { createRouter, createWebHistory } from 'vue-router'
 
 import Home from '../pages/Home.vue'
 import Schedule from '../pages/Schedule.vue'
 import Resources from '../pages/Resources.vue'
 
 export const router = createRouter({
-  history: createWebHashHistory(),
+  // Use history mode with Vite base for GH Pages
+  history: createWebHistory(import.meta.env.BASE_URL),
   routes: [
     { path: '/', name: 'home', component: Home },
     { path: '/schedule', name: 'schedule', component: Schedule },
@@ -16,4 +17,3 @@ export const router = createRouter({
     return { top: 0 }
   },
 })
-
