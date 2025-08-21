@@ -28,6 +28,16 @@ const isNoClass = (topic) => /^\s*No class/i.test(topic || '')
 const lectureRemainder = (topic) => (topic || '').replace(/^\s*No class\s*/i, '').trim()
 const isNoReading = (topic) => /^no\s*reading$/i.test((topic || '').trim())
 const isEmpty = (s) => !(s && String(s).trim())
+// Compose a project badge label from schedule.json fields
+const projectLabel = (row) => {
+  const num = row?.['project number'] ?? row?.projectNumber ?? row?.project_number
+  const ev = (row?.event ?? row?.projectEvent ?? row?.project_event) || ''
+  const n = (num !== undefined && num !== null && String(num).trim() !== '') ? String(num).trim() : ''
+  const e = String(ev).trim()
+  if (!n && !e) return ''
+  if (n && e) return `P${n}: ${e}`
+  return n ? `P${n}` : e
+}
 
 // Utilities to detect past dates (relative to local today)
 const parseMDY = (mdy) => {
@@ -109,8 +119,8 @@ const isPast = (row) => {
               </template>
             </td>
             <td>
-              <template v-if="row.project">
-                <span class="badge text-bg-info">{{ row.project }}</span>
+              <template v-if="projectLabel(row)">
+                <span class="badge text-bg-info">{{ projectLabel(row) }}</span>
               </template>
             </td>
           </tr>
