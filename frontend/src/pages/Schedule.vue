@@ -90,7 +90,8 @@ const isPast = (row) => {
 <template>
   <main class="container pb-5">
     <h1 class="h3 my-4">Schedule</h1>
-    <p class="text-muted">The schedule is subject to change, so please check it regularly for updates.</p>
+    <p>The schedule will be adjusted as we go, so please check it regularly for updates.</p>
+    <p>Note: Reading assignments should be completed before class. There may be a quiz on the reading material, and students are expected to participate in class discussions about the papers.</p>
 
     <div class="table-responsive">
       <table class="table table-striped table-hover align-middle">
