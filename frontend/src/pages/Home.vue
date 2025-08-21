@@ -39,6 +39,47 @@
     </section>
 
     <section class="mb-5">
+      <h3>Course Format and Topics</h3>
+      <p>
+        This class combines lectures with research paper reading and discussions. The lectures cover
+        the fundamentals of data science on social media. Reading materials are recent research papers
+        aligned with lecture topics.
+      </p>
+      <div class="row g-3">
+        <div class="col-md-6">
+          <div class="card h-100">
+            <div class="card-body">
+              <h6 class="card-title">Lecture Topics (sample)</h6>
+              <ul class="mb-0">
+                <li>What is Data Science and what does social media have to do with it?</li>
+                <li>Data collection</li>
+                <li>Social media data formats</li>
+                <li>Data management with RDBMS/NoSQL</li>
+                <li>Probability and statistics; hypothesis testing</li>
+                <li>Applications of Machine Learning</li>
+                <li>Visualization</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="card h-100">
+            <div class="card-body">
+              <h6 class="card-title">Reading Topics (sample)</h6>
+              <ul class="mb-0">
+                <li>Dataset and data collection</li>
+                <li>Algorithmic bias</li>
+                <li>Inauthentic behaviors</li>
+                <li>Ethics and data access</li>
+                <li>Generative AI and social media</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="mb-5">
       <h3>Prerequisites</h3>
       <ul>
         <li>CS 350 Operating Systems</li>
