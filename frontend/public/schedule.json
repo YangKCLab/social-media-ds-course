@@ -1,16 +1,18 @@
 [
   { "week": 1, "date": "8/19/2025", "lectureTopic": "Introduction", "readingTopic": "no reading", "materials": [] },
-  { "week": 1, "date": "8/21/2025", "lectureTopic": "How to read papers", "readingTopic": "no reading", "materials": [
+  { "week": 1, "date": "8/21/2025", "lectureTopic": "Introduction", "readingTopic": "no reading", "materials": [
+  ] },
+  { "week": 2, "date": "8/26/2025", "lectureTopic": "How to read papers", "readingTopic": "no reading", "materials": [
     { "title": "CoVaxxy: A Collection of English-Language Twitter Posts About COVID-19 Vaccines", "url": "https://ojs.aaai.org/index.php/ICWSM/article/view/18122" },
     { "title": "One Year of COVID-19 Vaccine Misinformation on Twitter: Longitudinal Study", "url": "https://doi.org/10.2196/42227" }
-  ] },
-  { "week": 2, "date": "8/26/2025", "lectureTopic": "Intro to social media", "readingTopic": "Dataset & data collection", "materials": [
-    { "title": "A Multi-Platform Collection of Social Media Posts about the 2022 U.S. Midterm Elections", "url": "https://ojs.aaai.org/index.php/ICWSM/article/view/22205" }
-  ] },
+      ] },
   { "week": 2, "date": "8/28/2025", "lectureTopic": "Intro to social media", "readingTopic": "Dataset & data collection", "materials": [
-    { "title": "Raiders of the Lost Kek: 3.5 Years ofAugmented 4chan Posts from the Politically Incorrect Board", "url": "https://doi.org/10.1609/icwsm.v14i1.7354" }
+    { "title": "A Multi-Platform Collection of Social Media Posts about the 2022 U.S. Midterm Elections", "url": "https://ojs.aaai.org/index.php/ICWSM/article/view/22205" }
+
   ] },
-  { "week": 3, "date": "9/2/2025", "lectureTopic": "Data collection", "readingTopic": "Dataset & data collection", "materials": [], "project": {
+  { "week": 3, "date": "9/2/2025", "lectureTopic": "Data collection", "readingTopic": "Dataset & data collection", "materials": [
+    { "title": "Raiders of the Lost Kek: 3.5 Years ofAugmented 4chan Posts from the Politically Incorrect Board", "url": "https://doi.org/10.1609/icwsm.v14i1.7354" }
+  ], "project": {
     "project number": "1",
     "event": "release"
   } },
