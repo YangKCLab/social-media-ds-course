@@ -62,14 +62,24 @@
     "date": "9/4/2025",
     "lectureTopic": "Data collection",
     "readingTopic": "Dataset & data collection",
-    "materials": []
+    "materials": [
+      {
+        "title": "Tracking the 2024 US Presidential Election Chatter on TikTok: A Public Multimodal Dataset",
+        "url": "https://doi.org/10.1145/3701716.3715291"
+      }
+    ]
   },
   {
     "week": 4,
     "date": "9/9/2025",
     "lectureTopic": "Data collection",
     "readingTopic": "Dataset & data collection",
-    "materials": [],
+    "materials": [
+      {
+        "title": "SuicidEmoji: Derived Emoji Dataset and Tasks for Suicide-Related Social Content",
+        "url": "https://doi.org/10.1145/3626772.3657852"
+      }
+    ],
     "project": {
       "project number": "1",
       "event": "team formation deadline"
