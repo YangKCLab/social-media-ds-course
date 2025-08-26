@@ -65,3 +65,18 @@ pdflatex syllabus.tex        # Manual compilation
 - Bootstrap 5 handles most frontend styling; custom CSS is minimal
 - JSON files in `public/` should be updated for course content changes
 - LaTeX compilation requires a working LaTeX distribution with latexmk
+
+## Python environment
+
+This project uses uv to manage the virtual environment.
+
+Use the following command to install the dependencies:
+
+```bash
+uv sync
+```
+Use the following command to run Python scripts:
+
+```bash
+uv run script.py
+```
