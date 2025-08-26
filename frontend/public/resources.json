@@ -1,3 +1,14 @@
 [
-  { "title": "Syllabus (PDF)", "href": "https://github.com/YangKCLab/social-media-ds-course/tree/main/syllabus" }
+  {
+    "title": "Syllabus (PDF)",
+    "href": "https://github.com/YangKCLab/social-media-ds-course/tree/main/syllabus"
+  },
+  {
+    "title": "Course GitHub repo",
+    "href": "https://github.com/YangKCLab/social-media-ds-course"
+  },
+  {
+    "title": "BlueSky API demos",
+    "href": "https://github.com/YangKCLab/social-media-ds-course/tree/main/demos/bluesky"
+  }
 ]
