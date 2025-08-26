@@ -1,71 +1,302 @@
 [
-  { "week": 1, "date": "8/19/2025", "lectureTopic": "Introduction", "readingTopic": "no reading", "materials": [] },
-  { "week": 1, "date": "8/21/2025", "lectureTopic": "Introduction", "readingTopic": "no reading", "materials": [
-  ] },
-  { "week": 2, "date": "8/26/2025", "lectureTopic": "How to read papers", "readingTopic": "no reading", "materials": [
-    { "title": "CoVaxxy: A Collection of English-Language Twitter Posts About COVID-19 Vaccines", "url": "https://ojs.aaai.org/index.php/ICWSM/article/view/18122" },
-    { "title": "One Year of COVID-19 Vaccine Misinformation on Twitter: Longitudinal Study", "url": "https://doi.org/10.2196/42227" }
-      ] },
-  { "week": 2, "date": "8/28/2025", "lectureTopic": "Intro to social media", "readingTopic": "Dataset & data collection", "materials": [
-    { "title": "A Multi-Platform Collection of Social Media Posts about the 2022 U.S. Midterm Elections", "url": "https://ojs.aaai.org/index.php/ICWSM/article/view/22205" }
-
-  ] },
-  { "week": 3, "date": "9/2/2025", "lectureTopic": "Data collection", "readingTopic": "Dataset & data collection", "materials": [
-    { "title": "Raiders of the Lost Kek: 3.5 Years ofAugmented 4chan Posts from the Politically Incorrect Board", "url": "https://doi.org/10.1609/icwsm.v14i1.7354" }
-  ], "project": {
-    "project number": "1",
-    "event": "release"
-  } },
-  { "week": 3, "date": "9/4/2025", "lectureTopic": "Data collection", "readingTopic": "Dataset & data collection", "materials": [] },
-  { "week": 4, "date": "9/9/2025", "lectureTopic": "Data collection", "readingTopic": "Dataset & data collection", "materials": [] },
-  { "week": 4, "date": "9/11/2025", "lectureTopic": "Git and CLI crash course", "readingTopic": "Algorithmic bias", "materials": [] },
-  { "week": 5, "date": "9/16/2025", "lectureTopic": "Data format JSON & CSV", "readingTopic": "Algorithmic bias", "materials": [], "project": {
-    "project number": "1",
-    "event": "proposal deadline"
-  } },
-  { "week": 5, "date": "9/18/2025", "lectureTopic": "Discussing P1 proposal", "readingTopic": "Algorithmic bias", "materials": [] },
-  { "week": 6, "date": "9/23/2025", "lectureTopic": "No class (Rosh Hashanah)", "readingTopic": "no reading", "materials": [] },
-  { "week": 6, "date": "9/25/2025", "lectureTopic": "Data format JSON & CSV", "readingTopic": "Algorithmic bias", "materials": [] },
-  { "week": 7, "date": "9/30/2025", "lectureTopic": "Data format JSON & CSV", "readingTopic": "Algorithmic bias", "materials": [] },
-  { "week": 7, "date": "10/2/2025", "lectureTopic": "No class (Yom Kippur)", "readingTopic": "no reading", "materials": [] },
-  { "week": 8, "date": "10/7/2025", "lectureTopic": "Database SQL & NoSQL", "readingTopic": "Algorithmic bias", "materials": [], "project": {
-    "project number": "2",
-    "event": "release"
-  } },
-  { "week": 8, "date": "10/9/2025", "lectureTopic": "Database SQL & NoSQL", "readingTopic": "Inauthentic behaviors", "materials": [], "project": {
-    "project number": "1",
-    "event": "implementation & report deadline"
-  } },
-  { "week": 9, "date": "10/14/2025", "lectureTopic": "Discussing P1 implementation & report", "readingTopic": "Inauthentic behaviors", "materials": [] },
-  { "week": 9, "date": "10/16/2025", "lectureTopic": "Database SQL & NoSQL", "readingTopic": "Inauthentic behaviors", "materials": [] },
-  { "week": 10, "date": "10/21/2025", "lectureTopic": "Stats basics", "readingTopic": "Inauthentic behaviors", "materials": [], "project": {
-    "project number": "2",
-    "event": "proposal deadline"
-  } },
-  { "week": 10, "date": "10/23/2025", "lectureTopic": "Discussing P2 proposal", "readingTopic": "Inauthentic behaviors", "materials": [] },
-  { "week": 11, "date": "10/28/2025", "lectureTopic": "Stats basics", "readingTopic": "Ethics and data access", "materials": [] },
-  { "week": 11, "date": "10/30/2025", "lectureTopic": "Data wrangling & vis", "readingTopic": "Ethics and data access", "materials": [] },
-  { "week": 12, "date": "11/4/2025", "lectureTopic": "Data wrangling & vis", "readingTopic": "Ethics and data access", "materials": [] },
-  { "week": 12, "date": "11/6/2025", "lectureTopic": "Data wrangling & vis", "readingTopic": "Ethics and data access", "materials": [], "project": {
-    "project number": "3",
-    "event": "release"
-  }  },
-  { "week": 13, "date": "11/11/2025", "lectureTopic": "Data wrangling & vis", "readingTopic": "Ethics and data access", "materials": []},
-  { "week": 13, "date": "11/13/2025", "lectureTopic": "Data wrangling & vis", "readingTopic": "Generative AI and social media", "materials": [], "project": {
-    "project number": "2",
-    "event": "implementation & report deadline"
-  } },
-  { "week": 14, "date": "11/18/2025", "lectureTopic": "Discussing P2 implementation & report", "readingTopic": "Generative AI and social media", "materials": [] },
-  { "week": 14, "date": "11/20/2025", "lectureTopic": "", "readingTopic": "Generative AI and social media", "materials": [], "project": {
-    "project number": "3",
-    "event": "proposal deadline"
-  } },
-  { "week": 15, "date": "11/25/2025", "lectureTopic": "Discussing the P3 proposal", "readingTopic": "Generative AI and social media", "materials": []},
-  { "week": 15, "date": "11/27/2025", "lectureTopic": "No class (Thanks giving break)", "readingTopic": "no reading", "materials": [] },
-  { "week": 16, "date": "12/2/2025", "lectureTopic": "", "readingTopic": "Generative AI and social media", "materials": [] },
-  { "week": 16, "date": "12/4/2025", "lectureTopic": "", "readingTopic": "Generative AI and social media", "materials": [], "project": {
-    "project number": "3",
-    "event": "implementation & report deadline"
-  } },
-  { "week": 17, "date": "12/12/2025", "lectureTopic": "Final examination week", "readingTopic": "no reading", "materials": [] }
+  {
+    "week": 1,
+    "date": "8/19/2025",
+    "lectureTopic": "Introduction",
+    "readingTopic": "no reading",
+    "materials": []
+  },
+  {
+    "week": 1,
+    "date": "8/21/2025",
+    "lectureTopic": "Introduction",
+    "readingTopic": "no reading",
+    "materials": []
+  },
+  {
+    "week": 2,
+    "date": "8/26/2025",
+    "lectureTopic": "How to read papers",
+    "readingTopic": "no reading",
+    "materials": [
+      {
+        "title": "CoVaxxy: A Collection of English-Language Twitter Posts About COVID-19 Vaccines",
+        "url": "https://ojs.aaai.org/index.php/ICWSM/article/view/18122"
+      },
+      {
+        "title": "One Year of COVID-19 Vaccine Misinformation on Twitter: Longitudinal Study",
+        "url": "https://doi.org/10.2196/42227"
+      }
+    ]
+  },
+  {
+    "week": 2,
+    "date": "8/28/2025",
+    "lectureTopic": "Intro to social media",
+    "readingTopic": "Dataset & data collection",
+    "materials": [
+      {
+        "title": "A Multi-Platform Collection of Social Media Posts about the 2022 U.S. Midterm Elections",
+        "url": "https://ojs.aaai.org/index.php/ICWSM/article/view/22205"
+      }
+    ]
+  },
+  {
+    "week": 3,
+    "date": "9/2/2025",
+    "lectureTopic": "Intro to social media",
+    "readingTopic": "Dataset & data collection",
+    "materials": [
+      {
+        "title": "Raiders of the Lost Kek: 3.5 Years ofAugmented 4chan Posts from the Politically Incorrect Board",
+        "url": "https://doi.org/10.1609/icwsm.v14i1.7354"
+      }
+    ],
+    "project": {
+      "project number": "1",
+      "event": "release"
+    }
+  },
+  {
+    "week": 3,
+    "date": "9/4/2025",
+    "lectureTopic": "Data collection",
+    "readingTopic": "Dataset & data collection",
+    "materials": [
+      {
+        "title": "Tracking the 2024 US Presidential Election Chatter on TikTok: A Public Multimodal Dataset",
+        "url": "https://doi.org/10.1145/3701716.3715291"
+      }
+    ]
+  },
+  {
+    "week": 4,
+    "date": "9/9/2025",
+    "lectureTopic": "Data collection",
+    "readingTopic": "Dataset & data collection",
+    "materials": [
+      {
+        "title": "SuicidEmoji: Derived Emoji Dataset and Tasks for Suicide-Related Social Content",
+        "url": "https://doi.org/10.1145/3626772.3657852"
+      }
+    ],
+    "project": {
+      "project number": "1",
+      "event": "team formation deadline"
+    }
+  },
+  {
+    "week": 4,
+    "date": "9/11/2025",
+    "lectureTopic": "Git and CLI crash course",
+    "readingTopic": "Algorithmic bias",
+    "materials": []
+  },
+  {
+    "week": 5,
+    "date": "9/16/2025",
+    "lectureTopic": "Data format JSON & CSV",
+    "readingTopic": "Algorithmic bias",
+    "materials": [],
+    "project": {
+      "project number": "1",
+      "event": "proposal deadline"
+    }
+  },
+  {
+    "week": 5,
+    "date": "9/18/2025",
+    "lectureTopic": "Discussing P1 proposal",
+    "readingTopic": "Algorithmic bias",
+    "materials": []
+  },
+  {
+    "week": 6,
+    "date": "9/23/2025",
+    "lectureTopic": "No class (Rosh Hashanah)",
+    "readingTopic": "no reading",
+    "materials": []
+  },
+  {
+    "week": 6,
+    "date": "9/25/2025",
+    "lectureTopic": "Data format JSON & CSV",
+    "readingTopic": "Algorithmic bias",
+    "materials": []
+  },
+  {
+    "week": 7,
+    "date": "9/30/2025",
+    "lectureTopic": "Data format JSON & CSV",
+    "readingTopic": "Algorithmic bias",
+    "materials": []
+  },
+  {
+    "week": 7,
+    "date": "10/2/2025",
+    "lectureTopic": "No class (Yom Kippur)",
+    "readingTopic": "no reading",
+    "materials": []
+  },
+  {
+    "week": 8,
+    "date": "10/7/2025",
+    "lectureTopic": "Database SQL & NoSQL",
+    "readingTopic": "Algorithmic bias",
+    "materials": [],
+    "project": {
+      "project number": "2",
+      "event": "release"
+    }
+  },
+  {
+    "week": 8,
+    "date": "10/9/2025",
+    "lectureTopic": "Database SQL & NoSQL",
+    "readingTopic": "Inauthentic behaviors",
+    "materials": [],
+    "project": {
+      "project number": "1",
+      "event": "implementation & report deadline"
+    }
+  },
+  {
+    "week": 9,
+    "date": "10/14/2025",
+    "lectureTopic": "Discussing P1 implementation & report",
+    "readingTopic": "Inauthentic behaviors",
+    "materials": []
+  },
+  {
+    "week": 9,
+    "date": "10/16/2025",
+    "lectureTopic": "Database SQL & NoSQL",
+    "readingTopic": "Inauthentic behaviors",
+    "materials": []
+  },
+  {
+    "week": 10,
+    "date": "10/21/2025",
+    "lectureTopic": "Stats basics",
+    "readingTopic": "Inauthentic behaviors",
+    "materials": [],
+    "project": {
+      "project number": "2",
+      "event": "proposal deadline"
+    }
+  },
+  {
+    "week": 10,
+    "date": "10/23/2025",
+    "lectureTopic": "Discussing P2 proposal",
+    "readingTopic": "Inauthentic behaviors",
+    "materials": []
+  },
+  {
+    "week": 11,
+    "date": "10/28/2025",
+    "lectureTopic": "Stats basics",
+    "readingTopic": "Ethics and data access",
+    "materials": []
+  },
+  {
+    "week": 11,
+    "date": "10/30/2025",
+    "lectureTopic": "Data wrangling & vis",
+    "readingTopic": "Ethics and data access",
+    "materials": []
+  },
+  {
+    "week": 12,
+    "date": "11/4/2025",
+    "lectureTopic": "Data wrangling & vis",
+    "readingTopic": "Ethics and data access",
+    "materials": []
+  },
+  {
+    "week": 12,
+    "date": "11/6/2025",
+    "lectureTopic": "Data wrangling & vis",
+    "readingTopic": "Ethics and data access",
+    "materials": [],
+    "project": {
+      "project number": "3",
+      "event": "release"
+    }
+  },
+  {
+    "week": 13,
+    "date": "11/11/2025",
+    "lectureTopic": "Data wrangling & vis",
+    "readingTopic": "Ethics and data access",
+    "materials": []
+  },
+  {
+    "week": 13,
+    "date": "11/13/2025",
+    "lectureTopic": "Data wrangling & vis",
+    "readingTopic": "Generative AI and social media",
+    "materials": [],
+    "project": {
+      "project number": "2",
+      "event": "implementation & report deadline"
+    }
+  },
+  {
+    "week": 14,
+    "date": "11/18/2025",
+    "lectureTopic": "Discussing P2 implementation & report",
+    "readingTopic": "Generative AI and social media",
+    "materials": []
+  },
+  {
+    "week": 14,
+    "date": "11/20/2025",
+    "lectureTopic": "",
+    "readingTopic": "Generative AI and social media",
+    "materials": [],
+    "project": {
+      "project number": "3",
+      "event": "proposal deadline"
+    }
+  },
+  {
+    "week": 15,
+    "date": "11/25/2025",
+    "lectureTopic": "Discussing the P3 proposal",
+    "readingTopic": "Generative AI and social media",
+    "materials": []
+  },
+  {
+    "week": 15,
+    "date": "11/27/2025",
+    "lectureTopic": "No class (Thanks giving break)",
+    "readingTopic": "no reading",
+    "materials": []
+  },
+  {
+    "week": 16,
+    "date": "12/2/2025",
+    "lectureTopic": "",
+    "readingTopic": "Generative AI and social media",
+    "materials": []
+  },
+  {
+    "week": 16,
+    "date": "12/4/2025",
+    "lectureTopic": "",
+    "readingTopic": "Generative AI and social media",
+    "materials": [],
+    "project": {
+      "project number": "3",
+      "event": "implementation & report deadline"
+    }
+  },
+  {
+    "week": 17,
+    "date": "12/12/2025",
+    "lectureTopic": "Final examination week",
+    "readingTopic": "no reading",
+    "materials": []
+  }
 ]
