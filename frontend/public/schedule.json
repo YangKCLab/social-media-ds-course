@@ -44,7 +44,14 @@
   {
     "week": 3,
     "date": "9/2/2025",
-    "lectureTopic": "Intro to social media",
+    "lectureTopic": "No class (Labor Day)",
+    "readingTopic": "no reading",
+    "materials": []
+  },
+  {
+    "week": 3,
+    "date": "9/4/2025",
+    "lectureTopic": "Intro to social media: 4chan",
     "readingTopic": "Dataset & data collection",
     "materials": [
       {
@@ -58,9 +65,9 @@
     }
   },
   {
-    "week": 3,
-    "date": "9/4/2025",
-    "lectureTopic": "Data collection",
+    "week": 4,
+    "date": "9/9/2025",
+    "lectureTopic": "Intro to social media: YouTube (tentative)",
     "readingTopic": "Dataset & data collection",
     "materials": [
       {
@@ -71,8 +78,8 @@
   },
   {
     "week": 4,
-    "date": "9/9/2025",
-    "lectureTopic": "Data collection",
+    "date": "9/11/2025",
+    "lectureTopic": "Data format JSON & CSV",
     "readingTopic": "Dataset & data collection",
     "materials": [
       {
@@ -86,29 +93,22 @@
     }
   },
   {
-    "week": 4,
-    "date": "9/11/2025",
+    "week": 5,
+    "date": "9/16/2025",
     "lectureTopic": "Git and CLI crash course",
     "readingTopic": "Algorithmic bias",
     "materials": []
   },
   {
     "week": 5,
-    "date": "9/16/2025",
-    "lectureTopic": "Data format JSON & CSV",
+    "date": "9/18/2025",
+    "lectureTopic": "Discussing P1 proposal",
     "readingTopic": "Algorithmic bias",
     "materials": [],
     "project": {
       "project number": "1",
       "event": "proposal deadline"
     }
-  },
-  {
-    "week": 5,
-    "date": "9/18/2025",
-    "lectureTopic": "Discussing P1 proposal",
-    "readingTopic": "Algorithmic bias",
-    "materials": []
   },
   {
     "week": 6,
