@@ -37,6 +37,17 @@ uv run demos/path/to/demo_script.py
 ### Available Demos
 
 - **Bluesky Demo** (`bluesky/`): Social media data collection and analysis examples using the Bluesky platform
+- **Snowball Sampling Demo** (`snowball-sampling/`): Interactive web application demonstrating keyword discovery through iterative sampling
+
+### Web-based Demos
+
+For interactive web demos (like snowball-sampling):
+
+```bash
+# Open index.html directly in browser, or run a local server:
+python -m http.server 8000
+# Then visit http://localhost:8000
+```
 
 ### Jupyter Notebooks
 
