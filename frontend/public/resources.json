@@ -10,5 +10,9 @@
   {
     "title": "BlueSky API demos",
     "href": "https://github.com/YangKCLab/social-media-ds-course/tree/main/demos/bluesky"
+  },
+  {
+    "title": "Snowball Sampling Demo",
+    "href": "https://github.com/YangKCLab/social-media-ds-course/tree/main/demos/snowball-sampling"
   }
 ]
