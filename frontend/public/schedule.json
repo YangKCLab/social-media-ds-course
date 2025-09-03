@@ -74,7 +74,11 @@
         "title": "Tracking the 2024 US Presidential Election Chatter on TikTok: A Public Multimodal Dataset",
         "url": "https://doi.org/10.1145/3701716.3715291"
       }
-    ]
+    ],
+    "project": {
+      "project number": "1",
+      "event": "team formation deadline"
+    }
   },
   {
     "week": 4,
@@ -86,23 +90,19 @@
         "title": "SuicidEmoji: Derived Emoji Dataset and Tasks for Suicide-Related Social Content",
         "url": "https://doi.org/10.1145/3626772.3657852"
       }
-    ],
-    "project": {
-      "project number": "1",
-      "event": "team formation deadline"
-    }
+    ]
   },
   {
     "week": 5,
     "date": "9/16/2025",
-    "lectureTopic": "Git and CLI crash course",
+    "lectureTopic": "Git, CLI, and LaTeX crash course",
     "readingTopic": "Algorithmic bias",
     "materials": []
   },
   {
     "week": 5,
     "date": "9/18/2025",
-    "lectureTopic": "Discussing P1 proposal",
+    "lectureTopic": "Data format JSON & CSV",
     "readingTopic": "Algorithmic bias",
     "materials": [],
     "project": {
@@ -120,8 +120,8 @@
   {
     "week": 6,
     "date": "9/25/2025",
-    "lectureTopic": "Data format JSON & CSV",
-    "readingTopic": "Algorithmic bias",
+    "lectureTopic": "P1 Proposal feedback",
+    "readingTopic": "no reading",
     "materials": []
   },
   {
@@ -154,6 +154,13 @@
     "date": "10/9/2025",
     "lectureTopic": "Database SQL & NoSQL",
     "readingTopic": "Inauthentic behaviors",
+    "materials": []
+  },
+  {
+    "week": 9,
+    "date": "10/14/2025",
+    "lectureTopic": "Database SQL & NoSQL",
+    "readingTopic": "Inauthentic behaviors",
     "materials": [],
     "project": {
       "project number": "1",
@@ -162,16 +169,9 @@
   },
   {
     "week": 9,
-    "date": "10/14/2025",
-    "lectureTopic": "Discussing P1 implementation & report",
-    "readingTopic": "Inauthentic behaviors",
-    "materials": []
-  },
-  {
-    "week": 9,
     "date": "10/16/2025",
-    "lectureTopic": "Database SQL & NoSQL",
-    "readingTopic": "Inauthentic behaviors",
+    "lectureTopic": "P1 Implementation & Report feedback",
+    "readingTopic": "no reading",
     "materials": []
   },
   {
@@ -188,8 +188,8 @@
   {
     "week": 10,
     "date": "10/23/2025",
-    "lectureTopic": "Discussing P2 proposal",
-    "readingTopic": "Inauthentic behaviors",
+    "lectureTopic": "P2 Proposal feedback",
+    "readingTopic": "no reading",
     "materials": []
   },
   {
@@ -245,8 +245,8 @@
   {
     "week": 14,
     "date": "11/18/2025",
-    "lectureTopic": "Discussing P2 implementation & report",
-    "readingTopic": "Generative AI and social media",
+    "lectureTopic": "P2 Implementation & Report feedback",
+    "readingTopic": "no reading",
     "materials": []
   },
   {
@@ -263,8 +263,8 @@
   {
     "week": 15,
     "date": "11/25/2025",
-    "lectureTopic": "Discussing the P3 proposal",
-    "readingTopic": "Generative AI and social media",
+    "lectureTopic": "P3 Proposal feedback",
+    "readingTopic": "no reading",
     "materials": []
   },
   {
