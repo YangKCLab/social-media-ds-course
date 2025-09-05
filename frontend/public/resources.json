@@ -1,22 +1,36 @@
-[
-  {
-    "title": "Syllabus (PDF)",
-    "href": "https://github.com/YangKCLab/social-media-ds-course/tree/main/syllabus"
-  },
-  {
-    "title": "Course GitHub repo",
-    "href": "https://github.com/YangKCLab/social-media-ds-course"
-  },
-  {
-    "title": "Snowball Sampling Demo",
-    "href": "https://github.com/YangKCLab/social-media-ds-course/tree/main/demos/snowball-sampling"
-  },
-  {
-    "title": "BlueSky API demos",
-    "href": "https://github.com/YangKCLab/social-media-ds-course/tree/main/demos/bluesky"
-  },
-  {
-    "title": "4chan API demos",
-    "href": "https://github.com/YangKCLab/social-media-ds-course/tree/main/demos/4chan"
-  }
-]
+{
+  "sections": [
+    {
+      "title": "Course Materials",
+      "description": "Essential documents and syllabus information",
+      "resources": [
+        {
+          "title": "Syllabus (PDF)",
+          "href": "https://github.com/YangKCLab/social-media-ds-course/tree/main/syllabus"
+        },
+        {
+          "title": "Course GitHub repo",
+          "href": "https://github.com/YangKCLab/social-media-ds-course"
+        }
+      ]
+    },
+    {
+      "title": "Interactive Demonstrations",
+      "description": "Examples and tutorials for social media data collection",
+      "resources": [
+        {
+          "title": "Snowball Sampling Demo",
+          "href": "https://github.com/YangKCLab/social-media-ds-course/tree/main/demos/snowball-sampling"
+        },
+        {
+          "title": "BlueSky API demos",
+          "href": "https://github.com/YangKCLab/social-media-ds-course/tree/main/demos/bluesky"
+        },
+        {
+          "title": "4chan API demos",
+          "href": "https://github.com/YangKCLab/social-media-ds-course/tree/main/demos/4chan"
+        }
+      ]
+    }
+  ]
+}
