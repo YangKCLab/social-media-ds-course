@@ -31,6 +31,32 @@
           "href": "https://github.com/YangKCLab/social-media-ds-course/tree/main/demos/4chan"
         }
       ]
+    },
+    {
+      "title": "Text Analysis Tools",
+      "description": "Useful tools for analyzing textual social media data",
+      "resources": [
+        {
+          "title": "spaCy",
+          "href": "https://spacy.io/"
+        },
+        {
+          "title": "Gensim",
+          "href": "https://radimrehurek.com/gensim"
+        },
+        {
+          "title": "BERTopic",
+          "href": "https://maartengr.github.io/BERTopic/index.html"
+        },
+        {
+          "title": "Perspective API",
+          "href": "https://www.perspectiveapi.com/"
+        },
+        {
+          "title": "OpenAI Moderation API",
+          "href": "https://platform.openai.com/docs/guides/moderation"
+        }
+      ]
     }
   ]
 }
