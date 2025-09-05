@@ -67,7 +67,7 @@
   {
     "week": 4,
     "date": "9/9/2025",
-    "lectureTopic": "Intro to social media: YouTube (tentative)",
+    "lectureTopic": "Intro to social media: YouTube",
     "readingTopic": "Dataset & data collection",
     "materials": [
       {
@@ -83,7 +83,7 @@
   {
     "week": 4,
     "date": "9/11/2025",
-    "lectureTopic": "Data format JSON & CSV",
+    "lectureTopic": "Git, CLI, and LaTeX crash course",
     "readingTopic": "Dataset & data collection",
     "materials": [
       {
@@ -95,16 +95,26 @@
   {
     "week": 5,
     "date": "9/16/2025",
-    "lectureTopic": "Git, CLI, and LaTeX crash course",
+    "lectureTopic": "Data format JSON & CSV",
     "readingTopic": "Algorithmic bias",
-    "materials": []
+    "materials": [
+      {
+        "title": "How do social media feed algorithms affect attitudes and behavior in an election campaign?",
+        "url": "https://drive.google.com/file/d/1u0-0CRduarufYKmLE2dvGFUM-iega2IU/view"
+      }
+    ]
   },
   {
     "week": 5,
     "date": "9/18/2025",
     "lectureTopic": "Data format JSON & CSV",
     "readingTopic": "Algorithmic bias",
-    "materials": [],
+    "materials": [
+      {
+        "title": "Algorithmic amplification of politics on Twitter",
+        "url": "https://doi.org/10.1073/pnas.2025334119"
+      }
+    ],
     "project": {
       "project number": "1",
       "event": "proposal deadline"
