@@ -38,23 +38,33 @@
       "resources": [
         {
           "title": "spaCy",
+          "description": "Python library for natural language processing",
           "href": "https://spacy.io/"
         },
         {
           "title": "Gensim",
+          "description": "Python library for topic modeling",
           "href": "https://radimrehurek.com/gensim"
         },
         {
           "title": "BERTopic",
+          "description": "Python library for topic modeling",
           "href": "https://maartengr.github.io/BERTopic/index.html"
         },
         {
           "title": "Perspective API",
+          "description": "API for content moderation",
           "href": "https://www.perspectiveapi.com/"
         },
         {
           "title": "OpenAI Moderation API",
+          "description": "API for content moderation",
           "href": "https://platform.openai.com/docs/guides/moderation"
+        },
+        {
+          "title": "langdetect",
+          "description": "Python library for language detection",
+          "href": "https://github.com/Mimino666/langdetect"
         }
       ]
     }

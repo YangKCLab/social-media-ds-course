@@ -28,6 +28,7 @@ onMounted(async () => {
         <ul>
           <li v-for="resource in section.resources" :key="resource.href">
             <a :href="resource.href" target="_blank" rel="noopener">{{ resource.title }}</a>
+            <span v-if="resource.description" class="text-muted small"> - {{ resource.description }}</span>
           </li>
         </ul>
       </section>
