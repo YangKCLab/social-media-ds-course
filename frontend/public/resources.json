@@ -67,6 +67,17 @@
           "href": "https://github.com/Mimino666/langdetect"
         }
       ]
+    },
+    {
+      "title": "Data Visualization Tools",
+      "description": "Useful tools for visualizing social media data",
+      "resources": [
+        {
+          "title": "Gephi",
+          "description": "Software for visualizing network data",
+          "href": "https://gephi.org/"
+        }
+      ]
     }
   ]
 }
