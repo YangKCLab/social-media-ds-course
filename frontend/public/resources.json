@@ -82,6 +82,41 @@
           "href": "https://gephi.org/"
         }
       ]
+    },
+    {
+      "title": "Missing Semester",
+      "description": "Useful resources crucial for CS students but not covered in the curriculum",
+      "resources": [
+        {
+          "title": "Missing Semester",
+          "description": "A collection of lectures on various CS tools and concepts",
+          "href": "https://missing.csail.mit.edu/"
+        }
+      ]
+    },
+    {
+      "title": "LaTeX",
+      "description": "Useful tools for writing LaTeX documents",
+      "resources": [
+        {
+          "title": "LaTeX distributions",
+          "description": "Find the LaTeX distribution that best suits your OS",
+          "href": "https://www.latex-project.org/get/"
+        },
+        {
+          "title": "Overleaf",
+          "description": "Online LaTeX editor",
+          "href": "https://www.overleaf.com/"
+        },
+        {
+          "title": "ACM LaTeX template official website",
+          "href": "https://www.acm.org/publications/proceedings-template"
+        },
+        {
+          "title": "ACM LaTeX template on Overleaf",
+          "href": "https://www.overleaf.com/latex/templates/acm-conference-proceedings-primary-article-template/wbvnghjbzwpc"
+        }
+      ]
     }
   ]
 }
