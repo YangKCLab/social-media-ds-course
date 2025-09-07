@@ -84,6 +84,17 @@
       ]
     },
     {
+      "title": "Missing Semester",
+      "description": "Useful resources crucial for CS students but not covered in the curriculum",
+      "resources": [
+        {
+          "title": "Missing Semester",
+          "description": "A collection of lectures on various CS tools and concepts",
+          "href": "https://missing.csail.mit.edu/"
+        }
+      ]
+    },
+    {
       "title": "LaTeX",
       "description": "Useful tools for writing LaTeX documents",
       "resources": [
