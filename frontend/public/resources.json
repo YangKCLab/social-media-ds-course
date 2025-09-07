@@ -29,6 +29,10 @@
         {
           "title": "4chan API demos",
           "href": "https://github.com/YangKCLab/social-media-ds-course/tree/main/demos/4chan"
+        },
+        {
+          "title": "YouTube API demos",
+          "href": "https://github.com/YangKCLab/social-media-ds-course/tree/main/demos/youtube"
         }
       ]
     },
