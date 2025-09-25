@@ -6,7 +6,12 @@ readme = "README.md"
 requires-python = ">=3.12"
 dependencies = [
     "atproto>=0.0.62",
+    "fastparquet>=2024.11.0",
     "google-api-python-client>=2.181.0",
+    "json-repair>=0.50.1",
+    "pandas>=2.3.2",
+    "pydantic>=2.11.7",
     "python-dotenv>=1.1.1",
     "requests>=2.32.5",
+    "ujson>=5.11.0",
 ]

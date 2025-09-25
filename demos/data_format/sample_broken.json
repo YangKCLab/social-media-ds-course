@@ -1,0 +1,32 @@
+{
+  "name": 'Alice Johnson',
+  "age": 28,
+  "isStudent": False,
+  "height": 5.6,
+  "address": {
+    "street": "123 Main St",
+    "city": "New York",
+    "zipCode": "10001",
+    "coordinates": {
+      "latitude": 40.7128,
+      "longitude": -74.0060
+    }
+  },
+  "hobbies": ["reading", "cycling", "photography"],
+  "favoriteColors": ["blue", "green"],
+  "spouse": null,
+  "education": {
+    "degree": "Master of Science",
+    "field": "Computer Science",
+    "university": "MIT",
+    "graduationYear": 2020,
+    "gpa": 3.85
+  },
+  "socialMedia": {
+    "twitter": "@alice_codes",
+    "linkedin": "linkedin.com/in/alicejohnson",
+    "github": "alice-dev"
+  },
+  "lastLogin": "2024-03-15T14:30:00Z",
+  "isActive": true
+}
