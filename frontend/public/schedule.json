@@ -156,7 +156,7 @@
   {
     "week": 8,
     "date": "10/7/2025",
-    "lectureTopic": "Database SQL & NoSQL",
+    "lectureTopic": "Database & SQL",
     "readingTopic": "Algorithmic bias",
     "materials": [
       {
@@ -172,7 +172,7 @@
   {
     "week": 8,
     "date": "10/9/2025",
-    "lectureTopic": "Database SQL & NoSQL",
+    "lectureTopic": "Database & SQL",
     "readingTopic": "Algorithmic bias",
     "materials": [
       {
@@ -184,23 +184,38 @@
   {
     "week": 9,
     "date": "10/14/2025",
-    "lectureTopic": "Database SQL & NoSQL",
+    "lectureTopic": "Database & NoSQL",
     "readingTopic": "Inauthentic behaviors",
-    "materials": []
+    "materials": [
+      {
+        "title": "Bots increase exposure to negative and inflammatory content in online social systems",
+        "url": "https://doi.org/10.1073/pnas.1803470115"
+      }
+    ]
   },
   {
     "week": 9,
     "date": "10/16/2025",
-    "lectureTopic": "Stats basics",
+    "lectureTopic": "Measurements on social media",
     "readingTopic": "Inauthentic behaviors",
-    "materials": []
+    "materials": [
+      {
+        "title": "The Manufacture of Partisan Echo Chambers by Follow Train Abuse on Twitter",
+        "url": "https://doi.org/10.1609/icwsm.v16i1.19354"
+      }
+    ]
   },
   {
     "week": 10,
     "date": "10/21/2025",
     "lectureTopic": "Stats basics",
     "readingTopic": "Inauthentic behaviors",
-    "materials": [],
+    "materials": [
+      {
+        "title": "Coordinated Inauthentic Behavior on TikTok: Challenges and Opportunities for Detection in a Video-First Ecosystem",
+        "url": "https://doi.org/10.48550/arXiv.2505.10867"
+      }
+    ],
     "project": {
       "project number": "1",
       "event": "implementation & report deadline"
@@ -227,23 +242,38 @@
   {
     "week": 11,
     "date": "10/30/2025",
-    "lectureTopic": "Data wrangling & vis",
-    "readingTopic": "Ethics and data access",
-    "materials": []
+    "lectureTopic": "Network analysis",
+    "readingTopic": "Inauthentic behaviors",
+    "materials": [
+      {
+        "title": "Exposure to the Russian Internet Research Agency foreign influence campaign on Twitter in the 2016 US election and its relationship to attitudes and voting behavior",
+        "url": "https://doi.org/10.1038/s41467-022-35576-9"
+      }
+    ]
   },
   {
     "week": 12,
     "date": "11/4/2025",
-    "lectureTopic": "Data wrangling & vis",
+    "lectureTopic": "Network analysis",
     "readingTopic": "Ethics and data access",
-    "materials": []
+    "materials": [
+      {
+        "title": "Experimental evidence of massive-scale emotional contagion through social networks",
+        "url": "https://doi.org/10.1073/pnas.1320040111"
+      }
+    ]
   },
   {
     "week": 12,
     "date": "11/6/2025",
     "lectureTopic": "Data wrangling & vis",
     "readingTopic": "Ethics and data access",
-    "materials": [],
+    "materials": [
+      {
+        "title": "Post-Post-API Age: Studying Digital Platforms in Scant Data Access Times",
+        "url": "https://doi.org/10.48550/arXiv.2505.09877"
+      }
+    ],
     "project": {
       "project number": "3",
       "event": "release"
@@ -254,14 +284,24 @@
     "date": "11/11/2025",
     "lectureTopic": "Data wrangling & vis",
     "readingTopic": "Ethics and data access",
-    "materials": []
+    "materials": [
+      {
+        "title": "Web Scraping for Research: Legal, Ethical, Institutional, and Scientific Considerations",
+        "url": "https://doi.org/10.48550/arXiv.2410.23432"
+      }
+    ]
   },
   {
     "week": 13,
     "date": "11/13/2025",
     "lectureTopic": "Data wrangling & vis",
     "readingTopic": "Generative AI and social media",
-    "materials": [],
+    "materials": [
+      {
+        "title": "Characterizing AI-Generated Misinformation on Social Media",
+        "url": "https://doi.org/10.48550/arXiv.2505.10266"
+      }
+    ],
     "project": {
       "project number": "2",
       "event": "implementation & report deadline"
@@ -279,7 +319,12 @@
     "date": "11/20/2025",
     "lectureTopic": "",
     "readingTopic": "Generative AI and social media",
-    "materials": [],
+    "materials": [
+      {
+        "title": "Examining the Prevalence and Dynamics of AI-Generated Media in Art Subreddits",
+        "url": "https://doi.org/10.48550/arXiv.2410.07302"
+      }
+    ],
     "project": {
       "project number": "3",
       "event": "proposal deadline"
@@ -302,26 +347,31 @@
   {
     "week": 16,
     "date": "12/2/2025",
-    "lectureTopic": "",
+    "lectureTopic": "Project demos",
     "readingTopic": "Generative AI and social media",
-    "materials": []
+    "materials": [
+      {
+        "title": "Simulating Social Media Using Large Language Models to Evaluate Alternative News Feed Algorithms",
+        "url": "https://doi.org/10.48550/arXiv.2310.05984"
+      }
+    ]
   },
   {
     "week": 16,
     "date": "12/4/2025",
-    "lectureTopic": "",
+    "lectureTopic": "Project demos",
     "readingTopic": "Generative AI and social media",
+    "materials": []
+  },
+  {
+    "week": 17,
+    "date": "12/12/2025",
+    "lectureTopic": "No class (Final examination week)",
+    "readingTopic": "no reading",
     "materials": [],
     "project": {
       "project number": "3",
       "event": "implementation & report deadline"
     }
-  },
-  {
-    "week": 17,
-    "date": "12/12/2025",
-    "lectureTopic": "Final examination week",
-    "readingTopic": "no reading",
-    "materials": []
   }
 ]
