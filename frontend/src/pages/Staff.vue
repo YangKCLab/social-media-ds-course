@@ -10,7 +10,7 @@ const instructor = {
 
 const tas = [
   // Add TA entries here when available
-  { name: 'TBD', email: null, officeHours: null },
+  { name: 'No TA', email: null, officeHours: null },
 ]
 </script>
 
@@ -56,4 +56,3 @@ const tas = [
 <style scoped>
 main { max-width: 980px; }
 </style>
-
