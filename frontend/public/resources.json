@@ -37,6 +37,20 @@
       ]
     },
     {
+      "title": "Databases",
+      "description": "Useful resources and tools for working with databases",
+      "resources": [
+        {
+          "title": "PostgreSQL Documentation",
+          "href": "https://www.postgresql.org/docs/current/"
+        },
+        {
+          "title": "psycopg3 Documentation",
+          "href": "https://www.psycopg.org/psycopg3/docs/"
+        }
+      ]
+    },
+    {
       "title": "Text Analysis Tools",
       "description": "Useful tools for analyzing textual social media data",
       "resources": [
