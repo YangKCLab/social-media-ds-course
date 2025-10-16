@@ -55,6 +55,16 @@
       "description": "Useful tools for analyzing textual social media data",
       "resources": [
         {
+          "title": "VADER Sentiment",
+          "description": "Python library for sentiment analysis",
+          "href": "https://github.com/cjhutto/vaderSentiment"
+        },
+        {
+          "title": "vMFD",
+          "description": "Python library for moral foundation analysis",
+          "href": "https://github.com/ZeningDuan/vMFD"
+        },
+        {
           "title": "spaCy",
           "description": "Python library for natural language processing",
           "href": "https://spacy.io/"
@@ -75,6 +85,11 @@
           "href": "https://www.perspectiveapi.com/"
         },
         {
+          "title": "Moderate Hate Speech",
+          "description": "API for hate speech detection",
+          "href": "https://moderatehatespeech.com"
+        },
+        {
           "title": "OpenAI Moderation API",
           "description": "API for content moderation",
           "href": "https://platform.openai.com/docs/guides/moderation"
@@ -87,6 +102,31 @@
       ]
     },
     {
+      "title": "URLs and Domains",
+      "description": "Useful resources and tools for working with URLs and domains",
+      "resources": [
+        {
+          "title": "URLExtract",
+          "description": "Python library for extracting URLs and domains from text",
+          "href": "https://github.com/lipoja/URLExtract"
+        },
+        {
+          "title": "List of news domains",
+          "description": "A list of news domains",
+          "href": "https://github.com/yang3kc/list_of_news_domains"
+        },
+        {
+          "title": "Domain quality ratings",
+          "href": "github.com/hauselin/domain-quality-ratings"
+        },
+        {
+          "title": "DomainDemo dataset",
+          "description": "A dataset of five metrics that describe the audience demographics of different domains",
+          "href": "https://github.com/LazerLab/DomainDemo"
+        }
+      ]
+    },
+    {
       "title": "Data Visualization Tools",
       "description": "Useful tools for visualizing social media data",
       "resources": [
@@ -94,6 +134,11 @@
           "title": "Gephi",
           "description": "Software for visualizing network data",
           "href": "https://gephi.org/"
+        },
+        {
+          "title": "Word cloud",
+          "description": "A tool for creating word clouds",
+          "href": "https://github.com/amueller/word_cloud"
         }
       ]
     },
