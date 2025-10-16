@@ -22,7 +22,7 @@
             <ul class="mb-0">
               <li>Fall 2025</li>
               <li>Tuesdays & Thursdays 9:45am-11:15am</li>
-              <li>Location: Library North (LN) G412</li>
+              <li>Location: Classroom Wing (CW) 110</li>
             </ul>
           </div>
         </div>
