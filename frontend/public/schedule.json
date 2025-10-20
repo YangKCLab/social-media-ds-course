@@ -226,22 +226,11 @@
     "date": "10/23/2025",
     "lectureTopic": "P1 Implementation & Report feedback",
     "readingTopic": "no reading",
-    "materials": [],
-    "project": {
-      "project number": "2",
-      "event": "proposal deadline"
-    }
-  },
-  {
-    "week": 11,
-    "date": "10/28/2025",
-    "lectureTopic": "P2 Proposal feedback",
-    "readingTopic": "no reading",
     "materials": []
   },
   {
     "week": 11,
-    "date": "10/30/2025",
+    "date": "10/28/2025",
     "lectureTopic": "Stats basics",
     "readingTopic": "Inauthentic behaviors",
     "materials": [
@@ -249,7 +238,18 @@
         "title": "Exposure to the Russian Internet Research Agency foreign influence campaign on Twitter in the 2016 US election and its relationship to attitudes and voting behavior",
         "url": "https://doi.org/10.1038/s41467-022-35576-9"
       }
-    ]
+    ],
+    "project": {
+      "project number": "2",
+      "event": "proposal deadline"
+    }
+  },
+  {
+    "week": 11,
+    "date": "10/30/2025",
+    "lectureTopic": "P2 Proposal feedback",
+    "readingTopic": "no reading",
+    "materials": []
   },
   {
     "week": 12,
