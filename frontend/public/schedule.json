@@ -231,7 +231,7 @@
   {
     "week": 11,
     "date": "10/28/2025",
-    "lectureTopic": "Stats basics",
+    "lectureTopic": "Stats basics and visualization",
     "readingTopic": "Inauthentic behaviors",
     "materials": [
       {
@@ -254,7 +254,7 @@
   {
     "week": 12,
     "date": "11/4/2025",
-    "lectureTopic": "Network analysis",
+    "lectureTopic": "Stats and visualization",
     "readingTopic": "Ethics and data access",
     "materials": [
       {
@@ -266,7 +266,7 @@
   {
     "week": 12,
     "date": "11/6/2025",
-    "lectureTopic": "Data wrangling & vis",
+    "lectureTopic": "Visualization",
     "readingTopic": "Ethics and data access",
     "materials": [
       {
@@ -282,7 +282,7 @@
   {
     "week": 13,
     "date": "11/11/2025",
-    "lectureTopic": "Data wrangling & vis",
+    "lectureTopic": "Network analysis",
     "readingTopic": "Ethics and data access",
     "materials": [
       {
@@ -294,7 +294,7 @@
   {
     "week": 13,
     "date": "11/13/2025",
-    "lectureTopic": "Data wrangling & vis",
+    "lectureTopic": "Network analysis",
     "readingTopic": "Generative AI and social media",
     "materials": [
       {
