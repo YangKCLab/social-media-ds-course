@@ -231,7 +231,7 @@
   {
     "week": 11,
     "date": "10/28/2025",
-    "lectureTopic": "Stats basics",
+    "lectureTopic": "Stats basics and visualization",
     "readingTopic": "Inauthentic behaviors",
     "materials": [
       {
@@ -254,24 +254,12 @@
   {
     "week": 12,
     "date": "11/4/2025",
-    "lectureTopic": "Network analysis",
+    "lectureTopic": "Stats basics and visualization",
     "readingTopic": "Ethics and data access",
     "materials": [
       {
         "title": "Experimental evidence of massive-scale emotional contagion through social networks",
         "url": "https://doi.org/10.1073/pnas.1320040111"
-      }
-    ]
-  },
-  {
-    "week": 12,
-    "date": "11/6/2025",
-    "lectureTopic": "Data wrangling & vis",
-    "readingTopic": "Ethics and data access",
-    "materials": [
-      {
-        "title": "Post-Post-API Age: Studying Digital Platforms in Scant Data Access Times",
-        "url": "https://doi.org/10.48550/arXiv.2505.09877"
       }
     ],
     "project": {
@@ -280,9 +268,21 @@
     }
   },
   {
+    "week": 12,
+    "date": "11/6/2025",
+    "lectureTopic": "Visualization",
+    "readingTopic": "Ethics and data access",
+    "materials": [
+      {
+        "title": "Post-Post-API Age: Studying Digital Platforms in Scant Data Access Times",
+        "url": "https://doi.org/10.48550/arXiv.2505.09877"
+      }
+    ]
+  },
+  {
     "week": 13,
     "date": "11/11/2025",
-    "lectureTopic": "Data wrangling & vis",
+    "lectureTopic": "Network analysis",
     "readingTopic": "Ethics and data access",
     "materials": [
       {
@@ -294,12 +294,16 @@
   {
     "week": 13,
     "date": "11/13/2025",
-    "lectureTopic": "Data wrangling & vis",
+    "lectureTopic": "Recap and summary",
     "readingTopic": "Generative AI and social media",
     "materials": [
       {
         "title": "Characterizing AI-Generated Misinformation on Social Media",
         "url": "https://doi.org/10.48550/arXiv.2505.10266"
+      },
+      {
+        "title": "Examining the Prevalence and Dynamics of AI-Generated Misinformation on Social Media",
+        "url": "https://doi.org/10.48550/arXiv.2410.07302"
       }
     ],
     "project": {
@@ -312,35 +316,30 @@
     "date": "11/18/2025",
     "lectureTopic": "P2 Implementation & Report feedback",
     "readingTopic": "no reading",
-    "materials": []
-  },
-  {
-    "week": 14,
-    "date": "11/20/2025",
-    "lectureTopic": "",
-    "readingTopic": "Generative AI and social media",
-    "materials": [
-      {
-        "title": "Examining the Prevalence and Dynamics of AI-Generated Media in Art Subreddits",
-        "url": "https://doi.org/10.48550/arXiv.2410.07302"
-      }
-    ],
+    "materials": [],
     "project": {
       "project number": "3",
       "event": "proposal deadline"
     }
   },
   {
-    "week": 15,
-    "date": "11/25/2025",
+    "week": 14,
+    "date": "11/20/2025",
     "lectureTopic": "P3 Proposal feedback",
     "readingTopic": "no reading",
     "materials": []
   },
   {
     "week": 15,
+    "date": "11/25/2025",
+    "lectureTopic": "No class (Thanksgiving break)",
+    "readingTopic": "no reading",
+    "materials": []
+  },
+  {
+    "week": 15,
     "date": "11/27/2025",
-    "lectureTopic": "No class (Thanks giving break)",
+    "lectureTopic": "No class (Thanksgiving break)",
     "readingTopic": "no reading",
     "materials": []
   },
@@ -360,18 +359,18 @@
     "week": 16,
     "date": "12/4/2025",
     "lectureTopic": "Project demos",
-    "readingTopic": "Generative AI and social media",
-    "materials": []
+    "readingTopic": "No reading",
+    "materials": [],
+    "project": {
+      "project number": "3",
+      "event": "implementation & report deadline"
+    }
   },
   {
     "week": 17,
     "date": "12/12/2025",
     "lectureTopic": "No class (Final examination week)",
     "readingTopic": "no reading",
-    "materials": [],
-    "project": {
-      "project number": "3",
-      "event": "implementation & report deadline"
-    }
+    "materials": []
   }
 ]
