@@ -131,6 +131,21 @@
       "description": "Useful tools for visualizing social media data",
       "resources": [
         {
+          "title": "Matplotlib",
+          "description": "Python library for creating static plots",
+          "href": "https://matplotlib.org/"
+        },
+        {
+          "title": "Seaborn",
+          "description": "Python library for creating static plots",
+          "href": "https://seaborn.pydata.org/"
+        },
+        {
+          "title": "Plotly",
+          "description": "Python library for creating interactive and web-based plots",
+          "href": "https://plotly.com/python/"
+        },
+        {
           "title": "Gephi",
           "description": "Software for visualizing network data",
           "href": "https://gephi.org/"
@@ -139,6 +154,27 @@
           "title": "Word cloud",
           "description": "A tool for creating word clouds",
           "href": "https://github.com/amueller/word_cloud"
+        },
+        {
+          "title": "Streamlit",
+          "description": "Python library for creating interactive and web-based applications",
+          "href": "https://streamlit.io/"
+        }
+      ]
+    },
+    {
+      "title": "Statistics",
+      "description": "Useful resources for running statistical tests",
+      "resources": [
+        {
+          "title": "Scipy",
+          "description": "Python library for scientific computing",
+          "href": "https://scipy.org/"
+        },
+        {
+          "title": "Statsmodels",
+          "description": "Python library for statistical modeling",
+          "href": "https://www.statsmodels.org/stable/index.html"
         }
       ]
     },
