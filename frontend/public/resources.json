@@ -117,7 +117,8 @@
         },
         {
           "title": "Domain quality ratings",
-          "href": "github.com/hauselin/domain-quality-ratings"
+          "href": "https://github.com/hauselin/domain-quality-ratings",
+          "description": "A list of domains and their quality ratings"
         },
         {
           "title": "DomainDemo dataset",
@@ -127,7 +128,7 @@
       ]
     },
     {
-      "title": "Data Visualization Tools",
+      "title": "Data Visualization Tools and Resources",
       "description": "Useful tools for visualizing social media data",
       "resources": [
         {
@@ -159,6 +160,26 @@
           "title": "Streamlit",
           "description": "Python library for creating interactive and web-based applications",
           "href": "https://streamlit.io/"
+        },
+        {
+          "title": "Python Graph Gallery",
+          "description": "A collection of examples for data visualization with Python",
+          "href": "https://python-graph-gallery.com/"
+        },
+        {
+          "title": "Contrast Checker",
+          "description": "A tool for checking the contrast of text and background colors",
+          "href": "https://webaim.org/resources/contrastchecker/"
+        },
+        {
+          "title": "Scicolor",
+          "description": "A collection of color palettes for scientific data visualization",
+          "href": "https://yang3kc.github.io/scicolor/"
+        },
+        {
+          "title": "Scicolor on PyPI",
+          "description": "A Python library for selecting color palettes for scientific data visualization",
+          "href": "https://pypi.org/project/scicolor/"
         }
       ]
     },
