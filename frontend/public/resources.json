@@ -132,6 +132,11 @@
       "description": "Tools and libraries for network analysis and visualization",
       "resources": [
         {
+          "title": "Network Science Book",
+          "description": "Free online textbook on network science by Albert-László Barabási",
+          "href": "https://networksciencebook.com/"
+        },
+        {
           "title": "NetworkX",
           "description": "Python library for network analysis and graph algorithms",
           "href": "https://networkx.org/"
