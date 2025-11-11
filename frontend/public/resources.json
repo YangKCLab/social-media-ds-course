@@ -155,6 +155,11 @@
           "title": "Gephi",
           "description": "Software for visualizing and exploring network data",
           "href": "https://gephi.org/"
+        },
+        {
+          "title": "Helios Web",
+          "description": "Interactive web-based network visualization tool",
+          "href": "https://github.com/filipinascimento/helios-web/"
         }
       ]
     },
