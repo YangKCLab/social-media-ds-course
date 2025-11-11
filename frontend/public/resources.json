@@ -117,7 +117,8 @@
         },
         {
           "title": "Domain quality ratings",
-          "href": "github.com/hauselin/domain-quality-ratings"
+          "href": "https://github.com/hauselin/domain-quality-ratings",
+          "description": "A list of domains and their quality ratings"
         },
         {
           "title": "DomainDemo dataset",
@@ -127,7 +128,43 @@
       ]
     },
     {
-      "title": "Data Visualization Tools",
+      "title": "Network Science Tools and Resources",
+      "description": "Tools and libraries for network analysis and visualization",
+      "resources": [
+        {
+          "title": "Network Science Book",
+          "description": "Free online textbook on network science by Albert-László Barabási",
+          "href": "https://networksciencebook.com/"
+        },
+        {
+          "title": "NetworkX",
+          "description": "Python library for network analysis and graph algorithms",
+          "href": "https://networkx.org/"
+        },
+        {
+          "title": "igraph",
+          "description": "Fast network analysis library for Python, R, and C",
+          "href": "https://igraph.org/"
+        },
+        {
+          "title": "graph-tool",
+          "description": "Efficient Python library for network analysis with C++ backend",
+          "href": "https://graph-tool.skewed.de/"
+        },
+        {
+          "title": "Gephi",
+          "description": "Software for visualizing and exploring network data",
+          "href": "https://gephi.org/"
+        },
+        {
+          "title": "Helios Web",
+          "description": "Interactive web-based network visualization tool",
+          "href": "https://github.com/filipinascimento/helios-web/"
+        }
+      ]
+    },
+    {
+      "title": "Data Visualization Tools and Resources",
       "description": "Useful tools for visualizing social media data",
       "resources": [
         {
@@ -146,11 +183,6 @@
           "href": "https://plotly.com/python/"
         },
         {
-          "title": "Gephi",
-          "description": "Software for visualizing network data",
-          "href": "https://gephi.org/"
-        },
-        {
           "title": "Word cloud",
           "description": "A tool for creating word clouds",
           "href": "https://github.com/amueller/word_cloud"
@@ -159,6 +191,26 @@
           "title": "Streamlit",
           "description": "Python library for creating interactive and web-based applications",
           "href": "https://streamlit.io/"
+        },
+        {
+          "title": "Python Graph Gallery",
+          "description": "A collection of examples for data visualization with Python",
+          "href": "https://python-graph-gallery.com/"
+        },
+        {
+          "title": "Contrast Checker",
+          "description": "A tool for checking the contrast of text and background colors",
+          "href": "https://webaim.org/resources/contrastchecker/"
+        },
+        {
+          "title": "Scicolor",
+          "description": "A collection of color palettes for scientific data visualization",
+          "href": "https://yang3kc.github.io/scicolor/"
+        },
+        {
+          "title": "Scicolor on PyPI",
+          "description": "A Python library for selecting color palettes for scientific data visualization",
+          "href": "https://pypi.org/project/scicolor/"
         }
       ]
     },
