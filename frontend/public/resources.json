@@ -128,6 +128,32 @@
       ]
     },
     {
+      "title": "Network Science Tools and Resources",
+      "description": "Tools and libraries for network analysis and visualization",
+      "resources": [
+        {
+          "title": "NetworkX",
+          "description": "Python library for network analysis and graph algorithms",
+          "href": "https://networkx.org/"
+        },
+        {
+          "title": "igraph",
+          "description": "Fast network analysis library for Python, R, and C",
+          "href": "https://igraph.org/"
+        },
+        {
+          "title": "graph-tool",
+          "description": "Efficient Python library for network analysis with C++ backend",
+          "href": "https://graph-tool.skewed.de/"
+        },
+        {
+          "title": "Gephi",
+          "description": "Software for visualizing and exploring network data",
+          "href": "https://gephi.org/"
+        }
+      ]
+    },
+    {
       "title": "Data Visualization Tools and Resources",
       "description": "Useful tools for visualizing social media data",
       "resources": [
@@ -145,11 +171,6 @@
           "title": "Plotly",
           "description": "Python library for creating interactive and web-based plots",
           "href": "https://plotly.com/python/"
-        },
-        {
-          "title": "Gephi",
-          "description": "Software for visualizing network data",
-          "href": "https://gephi.org/"
         },
         {
           "title": "Word cloud",
