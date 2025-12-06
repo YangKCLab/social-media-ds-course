@@ -49,7 +49,7 @@
         Download the most up-to-date syllabus (PDF):
         <a
           class="btn btn-outline-primary btn-sm ms-1"
-          href="https://github.com/YangKCLab/social-media-ds-course/blob/main/syllabus/syllabus.pdf"
+          href="./syllabus.pdf"
           target="_blank"
           rel="noopener"
         >
@@ -128,7 +128,8 @@
       <h3 id="grading">Method of Assessment</h3>
       <ul>
         <li>Paper reading quizzes: 15%</li>
-        <li>Three programming projects: 85% (evenly split)</li>
+        <li>Three programming projects: 75% (evenly split)</li>
+        <li>Final demonstration: 10%</li>
       </ul>
       <h4 class="mt-3">Grading Scale</h4>
       <ul>
