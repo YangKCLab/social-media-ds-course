@@ -49,6 +49,11 @@ latexmk -pdf syllabus.tex    # Direct compilation
 pdflatex syllabus.tex        # Manual compilation
 ```
 
+### Syllabus Management
+```bash
+make copy-syllabus   # Copy syllabus PDF to frontend/public/
+```
+
 ## Key Files and Structure
 
 - `frontend/src/App.vue`: Main application shell with navigation

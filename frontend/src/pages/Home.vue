@@ -49,7 +49,7 @@
         Download the most up-to-date syllabus (PDF):
         <a
           class="btn btn-outline-primary btn-sm ms-1"
-          href="https://github.com/YangKCLab/social-media-ds-course/blob/main/syllabus/syllabus.pdf"
+          href="./syllabus.pdf"
           target="_blank"
           rel="noopener"
         >
