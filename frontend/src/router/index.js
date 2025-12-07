@@ -1,6 +1,6 @@
 import { createRouter, createWebHistory } from 'vue-router'
 
-import Home from '../pages/Home.vue'
+import HomeWrapper from '../wrappers/HomeWrapper.vue'
 import Schedule from '../pages/Schedule.vue'
 import Resources from '../pages/Resources.vue'
 import Staff from '../pages/Staff.vue'
@@ -21,7 +21,7 @@ export const router = createRouter({
     {
       path: '/:version',
       children: [
-        { path: '', name: 'home', component: Home },
+        { path: '', name: 'home', component: HomeWrapper },
         { path: 'schedule', name: 'schedule', component: Schedule },
         { path: 'resources', name: 'resources', component: Resources },
         { path: 'staff', name: 'staff', component: Staff },

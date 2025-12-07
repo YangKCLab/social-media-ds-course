@@ -1,6 +1,6 @@
 <script setup>
 import { ref, onMounted, computed } from 'vue'
-import { useVersion } from '../composables/useVersion'
+import { useVersion } from '@/composables/useVersion'
 
 const { loadVersionData, currentVersion } = useVersion()
 const homeData = ref(null)
@@ -16,11 +16,10 @@ onMounted(async () => {
     homeData.value = await loadVersionData('home.json')
   } catch (error) {
     console.error('Failed to load home data:', error)
-    // Fallback to defaults
     homeData.value = {
       semester: 'Fall 2025',
-      classTime: 'Tuesdays & Thursdays 9:45am-11:15am',
-      location: 'Classroom Wing (CW) 110',
+      classTime: 'TBD',
+      location: 'TBD',
       grading: { quizzes: 15, projects: 75, demo: 10 },
       gradingScale: { A: '100–90', B: '89–80', C: '79–70', D: '69–60', F: '59–0' }
     }
@@ -30,6 +29,16 @@ onMounted(async () => {
 
 <template>
   <main class="container pb-5">
+    <!-- CUSTOM HOME PAGE FOR FALL 2025 -->
+    <!-- This demonstrates dynamic component loading per semester -->
+
+    <section class="mb-4">
+      <div class="alert alert-info" role="alert">
+        <strong>🎉 Custom Home Page!</strong> This is a custom home page component loaded specifically for Fall 2025.
+        Each semester can have its own unique layout and content.
+      </div>
+    </section>
+
     <section class="mb-4">
       <h1 class="display-6">CS 415/515 Social Media Data Science Pipelines</h1>
       <p class="lead" id="description">
@@ -104,7 +113,7 @@ onMounted(async () => {
         the fundamentals of data science on social media. Reading materials are recent research papers
         aligned with lecture topics.
 
-        Please refer to <router-link to="/schedule">Schedule</router-link> for the detailed lecture topics and reading materials.
+        Please refer to <router-link :to="`/${currentVersion}/schedule`">Schedule</router-link> for the detailed lecture topics and reading materials.
       </p>
       <div class="row g-3">
         <div class="col-md-6">

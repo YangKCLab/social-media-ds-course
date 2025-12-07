@@ -14,12 +14,17 @@ versions/
 │   │   ├── staff.json       # Instructor and TA info
 │   │   ├── home.json        # Semester metadata
 │   │   └── syllabus.pdf     # Compiled syllabus (add manually)
+│   ├── components/          # Optional custom Vue components
+│   │   └── Home.vue         # Custom home page (optional)
 │   └── demos/               # Demo notebooks
 │       ├── 4chan/
 │       ├── bluesky/
 │       ├── youtube/
 │       └── ...
 └── _template/               # Template for new semesters
+    ├── content/
+    └── components/          # Component templates
+        └── Home.vue
 ```
 
 ## Adding a New Semester
@@ -130,9 +135,71 @@ Course resources organized in sections:
   - `description`: Section description
   - `resources`: Array of resource links
 
+## Customizing the Home Page
+
+Each semester can optionally provide a **custom Home page component** for complete layout flexibility.
+
+### Using the Default Home Page
+
+If no custom component is provided, the semester will use the shared default Home page component (`frontend/src/pages/Home.vue`), which loads data from `content/home.json`.
+
+### Creating a Custom Home Page
+
+1. **Copy the template**:
+   ```bash
+   cp versions/_template/components/Home.vue versions/Spring2026/components/Home.vue
+   ```
+
+2. **Customize the component**:
+   Edit `versions/Spring2026/components/Home.vue` to modify:
+   - Layout and structure
+   - Sections and content
+   - Styling and design
+   - Additional features
+
+3. **Use the `useVersion` composable**:
+   The custom component can import and use the `useVersion` composable for version-aware data loading:
+   ```vue
+   <script setup>
+   import { ref, onMounted, computed } from 'vue'
+   import { useVersion } from '@/composables/useVersion'
+
+   const { loadVersionData, currentVersion } = useVersion()
+   const homeData = ref(null)
+
+   onMounted(async () => {
+     homeData.value = await loadVersionData('home.json')
+   })
+   </script>
+   ```
+
+4. **Access version-specific content**:
+   Custom components automatically have access to:
+   - `loadVersionData(filename)` - Load JSON files from `versions/{version}/content/`
+   - `currentVersion` - The current version ID (e.g., 'Fall2025')
+   - All standard Vue 3 features and Bootstrap 5 styling
+
+### Example Use Cases
+
+- **Different course focus**: Emphasize different aspects of the course
+- **Special announcements**: Add semester-specific notices or highlights
+- **Modified structure**: Reorganize sections or add new ones
+- **Custom styling**: Apply unique visual themes per semester
+- **Interactive elements**: Add semester-specific interactive features
+
+### Fallback Behavior
+
+The system automatically:
+1. Checks for `versions/{version}/components/Home.vue`
+2. Falls back to `frontend/src/pages/Home.vue` if not found
+3. Shows a loading spinner during async component loading
+
+This means you can gradually migrate to custom components as needed, without breaking existing versions.
+
 ## Notes
 
 - The `syllabus/` directory in the project root contains LaTeX source files (not versioned)
 - Compile syllabus locally and use `make copy-syllabus VERSION=<version>` to deploy
 - All versions remain editable after the semester ends
 - The frontend automatically loads version-specific content based on the URL
+- Custom components are discovered at build time using Vite's glob imports
