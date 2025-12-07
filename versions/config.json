@@ -1,0 +1,19 @@
+{
+  "defaultVersion": "Fall2025",
+  "versions": [
+    {
+      "id": "Fall2025",
+      "displayName": "Fall 2025",
+      "path": "Fall2025",
+      "active": true,
+      "semester": "Fall",
+      "year": 2025,
+      "navigation": {
+        "home": true,
+        "schedule": true,
+        "resources": true,
+        "staff": true
+      }
+    }
+  ]
+}

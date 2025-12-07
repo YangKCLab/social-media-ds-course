@@ -1,12 +1,13 @@
 <script setup>
 import { ref, onMounted, computed } from 'vue'
+import { useVersion } from '../composables/useVersion'
 
+const { loadVersionData } = useVersion()
 const schedule = ref([])
 
 onMounted(async () => {
   try {
-    const res = await fetch(import.meta.env.BASE_URL + 'schedule.json')
-    const data = await res.json()
+    const data = await loadVersionData('schedule.json')
     schedule.value = Array.isArray(data) ? data : []
   } catch (e) {
     console.error('Failed to load schedule.json', e)

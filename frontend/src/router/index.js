@@ -5,14 +5,28 @@ import Schedule from '../pages/Schedule.vue'
 import Resources from '../pages/Resources.vue'
 import Staff from '../pages/Staff.vue'
 
+// Default version - will be used for root redirect
+const DEFAULT_VERSION = 'Fall2025'
+
 export const router = createRouter({
   // Use history mode with Vite base for GH Pages
   history: createWebHistory(import.meta.env.BASE_URL),
   routes: [
-    { path: '/', name: 'home', component: Home },
-    { path: '/schedule', name: 'schedule', component: Schedule },
-    { path: '/resources', name: 'resources', component: Resources },
-    { path: '/staff', name: 'staff', component: Staff },
+    // Redirect root to default version
+    {
+      path: '/',
+      redirect: `/${DEFAULT_VERSION}/`
+    },
+    // Version-specific routes
+    {
+      path: '/:version',
+      children: [
+        { path: '', name: 'home', component: Home },
+        { path: 'schedule', name: 'schedule', component: Schedule },
+        { path: 'resources', name: 'resources', component: Resources },
+        { path: 'staff', name: 'staff', component: Staff },
+      ],
+    },
   ],
   scrollBehavior(to, from, saved) {
     if (saved) return saved

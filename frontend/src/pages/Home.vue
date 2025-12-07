@@ -1,5 +1,31 @@
-<script setup>
-// Home page content extracted from previous App.vue
+  <script setup>
+import { ref, onMounted, computed } from 'vue'
+import { useVersion } from '../composables/useVersion'
+
+const { loadVersionData, currentVersion } = useVersion()
+const homeData = ref(null)
+
+// Base URL for assets
+const baseUrl = import.meta.env.BASE_URL
+
+// Computed syllabus PDF URL
+const syllabusPdfUrl = computed(() => `${baseUrl}versions/${currentVersion.value}/content/syllabus.pdf`)
+
+onMounted(async () => {
+  try {
+    homeData.value = await loadVersionData('home.json')
+  } catch (error) {
+    console.error('Failed to load home data:', error)
+    // Fallback to defaults
+    homeData.value = {
+      semester: 'Fall 2025',
+      classTime: 'Tuesdays & Thursdays 9:45am-11:15am',
+      location: 'Classroom Wing (CW) 110',
+      grading: { quizzes: 15, projects: 75, demo: 10 },
+      gradingScale: { A: '100–90', B: '89–80', C: '79–70', D: '69–60', F: '59–0' }
+    }
+  }
+})
 </script>
 
 <template>
@@ -14,15 +40,15 @@
       </p>
     </section>
 
-    <section class="row gy-3 mb-5">
+    <section v-if="homeData" class="row gy-3 mb-5">
       <div class="col-md-12">
         <div class="card h-100">
           <div class="card-body">
             <h5 class="card-title" id="schedule">Time and Place</h5>
             <ul class="mb-0">
-              <li>Fall 2025</li>
-              <li>Tuesdays & Thursdays 9:45am-11:15am</li>
-              <li>Location: Classroom Wing (CW) 110</li>
+              <li>{{ homeData.semester }}</li>
+              <li>{{ homeData.classTime }}</li>
+              <li>Location: {{ homeData.location }}</li>
             </ul>
           </div>
         </div>
@@ -49,7 +75,7 @@
         Download the most up-to-date syllabus (PDF):
         <a
           class="btn btn-outline-primary btn-sm ms-1"
-          href="./syllabus.pdf"
+          :href="syllabusPdfUrl"
           target="_blank"
           rel="noopener"
         >
@@ -124,20 +150,20 @@
       </ul>
     </section>
 
-    <section class="mb-5">
+    <section v-if="homeData" class="mb-5">
       <h3 id="grading">Method of Assessment</h3>
       <ul>
-        <li>Paper reading quizzes: 15%</li>
-        <li>Three programming projects: 75% (evenly split)</li>
-        <li>Final demonstration: 10%</li>
+        <li>Paper reading quizzes: {{ homeData.grading.quizzes }}%</li>
+        <li>Three programming projects: {{ homeData.grading.projects }}% (evenly split)</li>
+        <li>Final demonstration: {{ homeData.grading.demo }}%</li>
       </ul>
       <h4 class="mt-3">Grading Scale</h4>
       <ul>
-        <li>A: 100–90</li>
-        <li>B: 89–80</li>
-        <li>C: 79–70</li>
-        <li>D: 69–60</li>
-        <li>F: 59–0</li>
+        <li>A: {{ homeData.gradingScale.A }}</li>
+        <li>B: {{ homeData.gradingScale.B }}</li>
+        <li>C: {{ homeData.gradingScale.C }}</li>
+        <li>D: {{ homeData.gradingScale.D }}</li>
+        <li>F: {{ homeData.gradingScale.F }}</li>
       </ul>
     </section>
 

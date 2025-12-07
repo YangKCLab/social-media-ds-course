@@ -403,3 +403,5 @@ __marimo__/
 .streamlit/secrets.toml
 
 .DS_Store
+# Frontend development symlink
+frontend/public/versions

@@ -1,0 +1,17 @@
+{
+  "semester": "Fall 2025",
+  "classTime": "Tuesdays & Thursdays 9:45am-11:15am",
+  "location": "Classroom Wing (CW) 110",
+  "grading": {
+    "quizzes": 15,
+    "projects": 75,
+    "demo": 10
+  },
+  "gradingScale": {
+    "A": "100–90",
+    "B": "89–80",
+    "C": "79–70",
+    "D": "69–60",
+    "F": "59–0"
+  }
+}
