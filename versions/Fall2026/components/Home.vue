@@ -32,7 +32,7 @@ onMounted(async () => {
     console.error('Failed to load home data:', error)
     // Fallback to defaults if home.json fails to load
     homeData.value = {
-      semester: 'Fall 2025',
+      semester: 'Fall 2026',
       classTime: 'TBD',
       location: 'TBD',
       grading: { quizzes: 15, projects: 75, demo: 10 },

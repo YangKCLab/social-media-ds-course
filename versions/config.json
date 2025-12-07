@@ -5,7 +5,7 @@
       "id": "Fall2025",
       "displayName": "Fall 2025",
       "path": "Fall2025",
-      "active": false,
+      "active": true,
       "semester": "Fall",
       "year": 2025,
       "navigation": {
@@ -25,7 +25,7 @@
       "navigation": {
         "home": true,
         "schedule": true,
-        "resources": true,
+        "resources": false,
         "staff": true
       }
     }

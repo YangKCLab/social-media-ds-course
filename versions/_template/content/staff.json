@@ -1,10 +1,10 @@
 {
   "instructor": {
-    "name": "Instructor Name",
-    "website": "https://example.com",
-    "email": "instructor@example.edu",
-    "office": "Office Location",
-    "officeHours": "Office hours schedule"
+    "name": "Kai-Cheng Yang",
+    "website": "https://www.kaichengyang.me/kaicheng",
+    "email": "yangkc@binghamton.edu",
+    "office": "G06A, Engineering Building",
+    "officeHours": "TBD"
   },
   "tas": []
 }

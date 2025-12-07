@@ -90,11 +90,13 @@ onMounted(async () => {
 
     <section class="mb-5">
       <h3 id="materials">Course Materials</h3>
-      <p>
-        There is no textbook for this course.
-        Lectures and selected research papers form the core materials.
-        Paper reading assignments and other course materials will be made available via Brightspace.
-      </p>
+      <p>There is no textbook for this course.</p>
+
+      <p>For course materials, please refer to the website: <a href="https://yangkclab.github.io/social-media-analysis/" target="_blank" rel="noopener">https://yangkclab.github.io/social-media-analysis</a>.</p>
+
+      <p>Paper reading assignments will be made available on the <router-link :to="`/${currentVersion}/schedule`">Schedule</router-link> page.</p>
+
+      <p>Slides and other course materials will be made available via Brightspace.</p>
     </section>
 
     <section class="mb-5">
@@ -104,7 +106,7 @@ onMounted(async () => {
         the fundamentals of data science on social media. Reading materials are recent research papers
         aligned with lecture topics.
 
-        Please refer to <router-link to="/schedule">Schedule</router-link> for the detailed lecture topics and reading materials.
+        Please refer to <router-link :to="`/${currentVersion}/schedule`">Schedule</router-link> for the detailed lecture topics and reading materials.
       </p>
       <div class="row g-3">
         <div class="col-md-6">
