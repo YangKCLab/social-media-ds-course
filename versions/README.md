@@ -162,7 +162,7 @@ If no custom component is provided, the semester will use the shared default Hom
    ```vue
    <script setup>
    import { ref, onMounted, computed } from 'vue'
-   import { useVersion } from '@/composables/useVersion'
+   import { useVersion } from '../../../frontend/src/composables/useVersion'
 
    const { loadVersionData, currentVersion } = useVersion()
    const homeData = ref(null)

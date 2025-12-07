@@ -1,6 +1,6 @@
 <script setup>
 import { ref, onMounted, computed } from 'vue'
-import { useVersion } from '@/composables/useVersion'
+import { useVersion } from '../../../frontend/src/composables/useVersion'
 
 // CUSTOM HOME PAGE TEMPLATE
 // This is a template for creating a custom home page for a specific semester.

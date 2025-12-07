@@ -2,12 +2,19 @@ import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
 import { cpSync, existsSync, rmSync } from 'fs'
 import { resolve } from 'path'
+import { fileURLToPath } from 'url'
 
 // https://vite.dev/config/
 export default defineConfig({
   // Set base for GitHub Pages project site
   // https://yangkclab.github.io/social-media-ds-course/
   base: '/social-media-ds-course/',
+
+  resolve: {
+    alias: {
+      '@': fileURLToPath(new URL('./src', import.meta.url))
+    }
+  },
 
   plugins: [
     vue(),
