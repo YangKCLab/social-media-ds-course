@@ -29,16 +29,6 @@ onMounted(async () => {
 
 <template>
   <main class="container pb-5">
-    <!-- CUSTOM HOME PAGE FOR FALL 2025 -->
-    <!-- This demonstrates dynamic component loading per semester -->
-
-    <section class="mb-4">
-      <div class="alert alert-info" role="alert">
-        <strong>🎉 Custom Home Page!</strong> This is a custom home page component loaded specifically for Fall 2025.
-        Each semester can have its own unique layout and content.
-      </div>
-    </section>
-
     <section class="mb-4">
       <h1 class="display-6">CS 415/515 Social Media Data Science Pipelines</h1>
       <p class="lead" id="description">

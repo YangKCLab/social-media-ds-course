@@ -14,6 +14,20 @@
         "resources": true,
         "staff": true
       }
+    },
+    {
+      "id": "Fall2026",
+      "displayName": "Fall 2026",
+      "path": "Fall2026",
+      "active": false,
+      "semester": "Fall",
+      "year": 2026,
+      "navigation": {
+        "home": true,
+        "schedule": true,
+        "resources": false,
+        "staff": true
+      }
     }
   ]
 }

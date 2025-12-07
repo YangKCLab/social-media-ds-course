@@ -1,6 +1,20 @@
 <script setup>
 import { ref, onMounted, computed } from 'vue'
-import { useVersion } from '../composables/useVersion'
+import { useVersion } from '../../../frontend/src/composables/useVersion'
+
+// CUSTOM HOME PAGE TEMPLATE
+// This is a template for creating a custom home page for a specific semester.
+// Copy this file to versions/{YourSemester}/components/Home.vue and customize it.
+//
+// The useVersion composable provides:
+// - loadVersionData(filename): Load version-specific JSON files
+// - currentVersion: The current version ID (e.g., 'Fall2025')
+//
+// You can customize:
+// - Layout and structure
+// - Styling and design
+// - Additional sections
+// - Dynamic content from JSON or hardcoded
 
 const { loadVersionData, currentVersion } = useVersion()
 const homeData = ref(null)
@@ -16,11 +30,11 @@ onMounted(async () => {
     homeData.value = await loadVersionData('home.json')
   } catch (error) {
     console.error('Failed to load home data:', error)
-    // Fallback to defaults
+    // Fallback to defaults if home.json fails to load
     homeData.value = {
-      semester: 'Fall 2025',
-      classTime: 'Tuesdays & Thursdays 9:45am-11:15am',
-      location: 'Classroom Wing (CW) 110',
+      semester: 'Fall 2026',
+      classTime: 'TBD',
+      location: 'TBD',
       grading: { quizzes: 15, projects: 75, demo: 10 },
       gradingScale: { A: '100–90', B: '89–80', C: '79–70', D: '69–60', F: '59–0' }
     }
@@ -30,6 +44,9 @@ onMounted(async () => {
 
 <template>
   <main class="container pb-5">
+    <!-- CUSTOMIZE THIS TEMPLATE FOR YOUR SEMESTER -->
+    <!-- You can change the layout, add/remove sections, modify styling, etc. -->
+
     <section class="mb-4">
       <h1 class="display-6">CS 415/515 Social Media Data Science Pipelines</h1>
       <p class="lead" id="description">
@@ -90,13 +107,11 @@ onMounted(async () => {
 
     <section class="mb-5">
       <h3 id="materials">Course Materials</h3>
-      <p>There is no textbook for this course.</p>
-
-      <p>For course materials, please refer to the website: <a href="https://yangkclab.github.io/social-media-analysis/" target="_blank" rel="noopener">https://yangkclab.github.io/social-media-analysis</a>.</p>
-
-      <p>Paper reading assignments will be made available on the <router-link :to="`/${currentVersion}/schedule`">Schedule</router-link> page.</p>
-
-      <p>Slides and other course materials will be made available via Brightspace.</p>
+      <p>
+        There is no textbook for this course.
+        Lectures and selected research papers form the core materials.
+        Paper reading assignments and other course materials will be made available via Brightspace.
+      </p>
     </section>
 
     <section class="mb-5">
