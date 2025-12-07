@@ -5,9 +5,23 @@
       "id": "Fall2025",
       "displayName": "Fall 2025",
       "path": "Fall2025",
-      "active": true,
+      "active": false,
       "semester": "Fall",
       "year": 2025,
+      "navigation": {
+        "home": true,
+        "schedule": true,
+        "resources": true,
+        "staff": true
+      }
+    },
+    {
+      "id": "Fall2026",
+      "displayName": "Fall 2026",
+      "path": "Fall2026",
+      "active": false,
+      "semester": "Fall",
+      "year": 2026,
       "navigation": {
         "home": true,
         "schedule": true,

@@ -1,0 +1,10 @@
+{
+  "instructor": {
+    "name": "Instructor Name",
+    "website": "https://example.com",
+    "email": "instructor@example.edu",
+    "office": "Office Location",
+    "officeHours": "Office hours schedule"
+  },
+  "tas": []
+}
