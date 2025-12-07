@@ -1,21 +1,32 @@
 <script setup>
-// Staff page with instructor and TA information
-const instructor = {
-  name: 'Kai-Cheng Yang',
-  website: 'https://www.kaichengyang.me/kaicheng',
-  email: 'yangkc@binghamton.edu',
-  office: 'G06A, Engineering Building',
-  officeHours: 'Tue 12:30–2:30pm and by appointment',
-}
+import { ref, onMounted } from 'vue'
+import { useVersion } from '../composables/useVersion'
 
-const tas = [
-  // Add TA entries here when available
-  { name: 'No TA', email: null, officeHours: null },
-]
+const { loadVersionData } = useVersion()
+const staffData = ref(null)
+
+onMounted(async () => {
+  try {
+    staffData.value = await loadVersionData('staff.json')
+  } catch (error) {
+    console.error('Failed to load staff data:', error)
+    // Fallback to defaults
+    staffData.value = {
+      instructor: {
+        name: 'Kai-Cheng Yang',
+        website: 'https://www.kaichengyang.me/kaicheng',
+        email: 'yangkc@binghamton.edu',
+        office: 'G06A, Engineering Building',
+        officeHours: 'Tue 12:30–2:30pm and by appointment',
+      },
+      tas: []
+    }
+  }
+})
 </script>
 
 <template>
-  <main class="container pb-5">
+  <main v-if="staffData" class="container pb-5">
     <h1 class="h3 my-4">Staff</h1>
 
     <section class="mb-4">
@@ -24,12 +35,12 @@ const tas = [
           <h5 class="card-title">Instructor</h5>
           <ul class="mb-0">
             <li>
-              <strong>{{ instructor.name }}</strong>
-              — <a :href="instructor.website" target="_blank" rel="noopener">website</a>
+              <strong>{{ staffData.instructor.name }}</strong>
+              — <a :href="staffData.instructor.website" target="_blank" rel="noopener">website</a>
             </li>
-            <li>Email: <a :href="`mailto:${instructor.email}`">{{ instructor.email }}</a></li>
-            <li>Office: {{ instructor.office }}</li>
-            <li>Office Hours: {{ instructor.officeHours }}</li>
+            <li>Email: <a :href="`mailto:${staffData.instructor.email}`">{{ staffData.instructor.email }}</a></li>
+            <li>Office: {{ staffData.instructor.office }}</li>
+            <li>Office Hours: {{ staffData.instructor.officeHours }}</li>
           </ul>
         </div>
       </div>
@@ -39,9 +50,9 @@ const tas = [
       <div class="card">
         <div class="card-body">
           <h5 class="card-title">Teaching Assistants</h5>
-          <div v-if="!tas.length" class="text-muted">TAs will be announced soon.</div>
+          <div v-if="!staffData.tas.length || (staffData.tas.length === 1 && !staffData.tas[0].email)" class="text-muted">TAs will be announced soon.</div>
           <ul v-else class="mb-0">
-            <li v-for="ta in tas" :key="ta.name">
+            <li v-for="ta in staffData.tas" :key="ta.name">
               <strong>{{ ta.name }}</strong>
               <template v-if="ta.email"> — <a :href="`mailto:${ta.email}`">{{ ta.email }}</a></template>
               <template v-if="ta.officeHours"> — Office Hours: {{ ta.officeHours }}</template>

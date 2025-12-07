@@ -1,13 +1,14 @@
 <script setup>
 import { ref, onMounted } from 'vue'
+import { useVersion } from '../composables/useVersion'
 
+const { loadVersionData } = useVersion()
 const sections = ref([])
 const error = ref(null)
 
 onMounted(async () => {
   try {
-    const res = await fetch(import.meta.env.BASE_URL + 'resources.json')
-    const data = await res.json()
+    const data = await loadVersionData('resources.json')
     sections.value = data.sections || []
   } catch (e) {
     console.error('Failed to load resources.json', e)

@@ -6,6 +6,7 @@ on:
       - main
     paths:
       - 'frontend/**'
+      - 'versions/**'
       - '.github/workflows/deploy-frontend.yml'
   workflow_dispatch:
 
