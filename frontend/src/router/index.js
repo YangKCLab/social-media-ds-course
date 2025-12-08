@@ -1,4 +1,5 @@
 import { createRouter, createWebHistory } from 'vue-router'
+import { normalizeVersion } from '../composables/useVersion'
 
 import HomeWrapper from '../wrappers/HomeWrapper.vue'
 import Schedule from '../pages/Schedule.vue'
@@ -47,15 +48,42 @@ export const router = createRouter({
   },
 })
 
-// Navigation guard to redirect root to active version
+// Navigation guard to redirect root and normalize version case
 router.beforeEach(async (to, _from, next) => {
+  // Handle root path redirect
   if (to.path === '/') {
     const config = await loadVersionConfig()
-    // Find the active version, or fall back to defaultVersion
     const active = config.versions.find(v => v.active === true)
     const version = active ? active.id : config.defaultVersion
     next(`/${version}/`)
-  } else {
-    next()
+    return
   }
+
+  // Handle version normalization
+  const versionParam = to.params.version
+  if (versionParam) {
+    const config = await loadVersionConfig()
+    const canonicalVersion = normalizeVersion(versionParam, config.versions)
+
+    // Case 1: Version not found in config → redirect to default version
+    if (!canonicalVersion) {
+      console.warn(`Unknown version: ${versionParam}, redirecting to default`)
+      const active = config.versions.find(v => v.active === true)
+      const defaultVersion = active ? active.id : config.defaultVersion
+      const targetPath = to.path.replace(`/${versionParam}`, `/${defaultVersion}`)
+      next(targetPath)
+      return
+    }
+
+    // Case 2: Version exists but wrong case → redirect to canonical case
+    if (canonicalVersion !== versionParam) {
+      console.log(`Normalizing version: ${versionParam} → ${canonicalVersion}`)
+      const targetPath = to.path.replace(`/${versionParam}`, `/${canonicalVersion}`)
+      next(targetPath)
+      return
+    }
+  }
+
+  // Case 3: Version is already correct or no version param → proceed
+  next()
 })
