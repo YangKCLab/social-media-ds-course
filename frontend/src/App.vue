@@ -20,7 +20,11 @@ const currentVersion = computed(() => route.params.version || 'Fall2025')
 
 // Get current version config
 const currentVersionConfig = computed(() => {
-  return versions.value.find(v => v.id === currentVersion.value) || {}
+  const match = versions.value.find(v => v.id === currentVersion.value)
+  if (!match && currentVersion.value) {
+    console.warn(`No config found for version: ${currentVersion.value}`)
+  }
+  return match || {}
 })
 
 // Get navigation settings with defaults
