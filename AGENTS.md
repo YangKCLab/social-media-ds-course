@@ -2,16 +2,16 @@
 
 ## Project Structure & Module Organization
 - `frontend/`: Vue 3 + Vite app for the course site (deployed via GitHub Pages). Key files: `src/pages/*.vue`, `src/router/`, `public/schedule.json`.
-- `syllabus/`: LaTeX source (`syllabus.tex`, `Makefile`) to build the course syllabus PDF.
 - `.github/workflows/`: CI for Pages deploy (`deploy-frontend.yml`).
+- **Syllabus**: LaTeX source lives in the private `social-media-ds-course-internal` repo. The compiled `syllabus.pdf` is manually copied to `versions/<VERSION>/content/` using `make copy-syllabus`.
 
 ## Build, Test, and Development Commands
 - Frontend
   - `cd frontend && npm run dev`: Start local dev server.
   - `cd frontend && npm run build`: Production build to `frontend/dist`.
   - `cd frontend && npm run preview`: Serve the built site locally.
-- Syllabus
-  - `cd syllabus && make` or `latexmk -pdf syllabus.tex`: Build `syllabus.pdf`.
+- Syllabus deployment (PDF built in internal repo, copied here)
+  - `make copy-syllabus VERSION=<v> SYLLABUS_PDF=../social-media-ds-course-internal/syllabus/syllabus.pdf`
 - Deployment
   - Push to `main` to auto‑deploy Pages. Vite `base` is set to `/social-media-ds-course/` in `frontend/vite.config.js`.
 
@@ -21,8 +21,6 @@
   - Indentation: 2 spaces; keep components small and focused.
   - Routes: add pages under `src/pages/` and register in `src/router/index.js`.
   - Styles: Prefer Bootstrap 5 utility classes; minimal custom CSS in `src/style.css` or scoped styles.
-- Syllabus
-  - Keep logical sections; avoid ad‑hoc formatting. Use existing macros/styles.
 
 ## Testing Guidelines
 - No formal test suite configured. Manually verify:
@@ -39,4 +37,4 @@
 
 ## Agent Tips & Notes
 - Updating schedule: edit `frontend/public/schedule.json` (supports nested `project` metadata) and verify via `npm run dev`.
-- Syllabus is the source of truth for policies; link it from the homepage when updated.
+- Course policies are documented in the syllabus (built and maintained in `social-media-ds-course-internal`); the compiled PDF is served at `versions/<VERSION>/content/syllabus.pdf`.

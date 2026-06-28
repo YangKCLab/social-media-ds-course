@@ -65,10 +65,12 @@ versions/
    cp -r demos/* versions/Spring2026/demos/
    ```
 
-5. Compile syllabus locally and copy to version:
+5. Build the syllabus PDF in the internal repo and copy it here:
    ```bash
-   cd syllabus && make
-   make copy-syllabus VERSION=Spring2026
+   # In the social-media-ds-course-internal repo:
+   cd ../social-media-ds-course-internal/syllabus && make
+   # Then back here:
+   make copy-syllabus VERSION=Spring2026 SYLLABUS_PDF=../social-media-ds-course-internal/syllabus/syllabus.pdf
    ```
 
 6. Validate the configuration:
@@ -200,8 +202,8 @@ This means you can gradually migrate to custom components as needed, without bre
 
 ## Notes
 
-- The `syllabus/` directory in the project root contains LaTeX source files (not versioned)
-- Compile syllabus locally and use `make copy-syllabus VERSION=<version>` to deploy
+- The syllabus LaTeX source lives in the private `social-media-ds-course-internal` repo (`syllabus/` folder)
+- Build the PDF there (`cd ../social-media-ds-course-internal/syllabus && make`), then copy with `make copy-syllabus VERSION=<version> SYLLABUS_PDF=../social-media-ds-course-internal/syllabus/syllabus.pdf`
 - All versions remain editable after the semester ends
 - The frontend automatically loads version-specific content based on the URL
 - Custom components are discovered at build time using Vite's glob imports
