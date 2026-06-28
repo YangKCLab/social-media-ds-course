@@ -62,11 +62,20 @@ onMounted(async () => {
         <div class="card h-100">
           <div class="card-body">
             <h5 class="card-title" id="schedule">Time and Place</h5>
-            <ul class="mb-0">
+            <ul class="mb-2">
               <li>{{ homeData.semester }}</li>
               <li>{{ homeData.classTime }}</li>
               <li>Location: {{ homeData.location }}</li>
             </ul>
+            <a
+              v-if="homeData.scheduleUrl"
+              class="btn btn-outline-primary btn-sm"
+              :href="homeData.scheduleUrl"
+              target="_blank"
+              rel="noopener"
+            >
+              View Schedule
+            </a>
           </div>
         </div>
       </div>
@@ -121,7 +130,7 @@ onMounted(async () => {
         the fundamentals of data science on social media. Reading materials are recent research papers
         aligned with lecture topics.
 
-        Please refer to <router-link :to="`/${currentVersion}/schedule`">Schedule</router-link> for the detailed lecture topics and reading materials.
+        Please refer to the <a :href="homeData?.scheduleUrl" target="_blank" rel="noopener">Schedule</a> for the detailed lecture topics and reading materials.
       </p>
       <div class="row g-3">
         <div class="col-md-6">
