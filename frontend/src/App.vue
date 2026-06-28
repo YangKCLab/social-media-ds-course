@@ -121,9 +121,14 @@ const accentColor = computed(() => currentVersionConfig.value.accent || '#0d9488
      --course-accent custom property is set on .app-shell and cascades to all
      descendants, so these rules pick up the active iteration's color. -->
 <style>
-.app-shell {
-  --bs-link-color: var(--course-accent);
-  --bs-link-hover-color: color-mix(in srgb, var(--course-accent) 80%, black);
+/* Bootstrap 5.3 colors anchors via --bs-link-color-rgb inside rgba(), so a hex
+   override there is ignored. Set the color directly on body links, excluding
+   anchors that already have their own treatment (nav, brand, buttons). */
+.app-shell a:not(.btn):not(.nav-link):not(.navbar-brand):not(.dropdown-toggle):not(.dropdown-item) {
+  color: var(--course-accent);
+}
+.app-shell a:not(.btn):not(.nav-link):not(.navbar-brand):not(.dropdown-toggle):not(.dropdown-item):hover {
+  color: color-mix(in srgb, var(--course-accent) 80%, black);
 }
 .app-shell .navbar {
   border-top: 3px solid var(--course-accent);
