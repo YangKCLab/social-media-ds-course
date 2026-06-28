@@ -119,6 +119,8 @@ onMounted(async () => {
       <p>
         There is no textbook for this course.
         Lectures and selected research papers form the core materials.
+        All course materials are hosted on the
+        <a v-if="homeData?.materialsUrl" :href="homeData.materialsUrl" target="_blank" rel="noopener">course materials site</a>.
         Paper reading assignments and other course materials will be made available via Brightspace.
       </p>
     </section>
