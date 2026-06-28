@@ -121,6 +121,10 @@ const accentColor = computed(() => currentVersionConfig.value.accent || '#0d9488
      --course-accent custom property is set on .app-shell and cascades to all
      descendants, so these rules pick up the active iteration's color. -->
 <style>
+.app-shell {
+  --bs-link-color: var(--course-accent);
+  --bs-link-hover-color: color-mix(in srgb, var(--course-accent) 80%, black);
+}
 .app-shell .navbar {
   border-top: 3px solid var(--course-accent);
 }
