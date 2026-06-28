@@ -53,9 +53,16 @@ const navigation = computed(() => {
     staff: true
   }
 })
+
+// Per-iteration accent color cue. Each version may set an `accent` hex in
+// config.json; it tints the navbar strip, brand, active link, and outline
+// buttons so the current semester is identifiable at a glance. Teal is the
+// neutral fallback if a version omits it.
+const accentColor = computed(() => currentVersionConfig.value.accent || '#0d9488')
 </script>
 
 <template>
+  <div class="app-shell" :style="{ '--course-accent': accentColor }">
   <header class="navbar navbar-expand-lg navbar-light bg-light border-bottom mb-4">
     <div class="container">
       <RouterLink class="navbar-brand fw-semibold" :to="`/${currentVersion}/`">CS 415/515 — Social Media Data Science</RouterLink>
@@ -106,8 +113,29 @@ const navigation = computed(() => {
     </div>
   </header>
   <RouterView />
+  </div>
 </template>
 
-<style scoped>
-/* Navbar spacing and minor tweaks */
+<!-- Not scoped: the accent must reach outline buttons rendered inside
+     RouterView child components (e.g. the version-specific Home page). The
+     --course-accent custom property is set on .app-shell and cascades to all
+     descendants, so these rules pick up the active iteration's color. -->
+<style>
+.app-shell .navbar {
+  border-top: 3px solid var(--course-accent);
+}
+.app-shell .navbar-brand {
+  color: var(--course-accent);
+}
+.app-shell .nav-link.router-link-exact-active {
+  color: var(--course-accent);
+}
+.app-shell .btn-outline-primary {
+  --bs-btn-color: var(--course-accent);
+  --bs-btn-border-color: var(--course-accent);
+  --bs-btn-hover-bg: var(--course-accent);
+  --bs-btn-hover-border-color: var(--course-accent);
+  --bs-btn-active-bg: var(--course-accent);
+  --bs-btn-active-border-color: var(--course-accent);
+}
 </style>

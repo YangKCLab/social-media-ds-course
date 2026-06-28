@@ -8,6 +8,7 @@
       "active": false,
       "semester": "Fall",
       "year": 2025,
+      "accent": "#4f46e5",
       "navigation": {
         "home": true,
         "schedule": true,
@@ -22,6 +23,7 @@
       "active": true,
       "semester": "Fall",
       "year": 2026,
+      "accent": "#0d9488",
       "navigation": {
         "home": true,
         "schedule": true,
