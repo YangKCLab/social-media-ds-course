@@ -30,14 +30,12 @@ This repository contains course materials for CS 415/515 Social Media Data Scien
   - `resources.json` - Course resources and links
   - `staff.json` - Instructor and TA information
   - `home.json` - Semester metadata (dates, grading, location)
-  - `syllabus.pdf` - Compiled syllabus (added manually)
+  - `syllabus.pdf` - Compiled syllabus (copied manually from the internal repo)
 
-### Syllabus (`/syllabus/`)
-- **Technology**: LaTeX with custom style packages
-- **Purpose**: Official course syllabus document generation
-- **Dependencies**: Uses `memoir-article-styles.sty` and `org-preamble-pdflatex.sty` for formatting
-- **Build System**: Makefile with latexmk for automated compilation
-- **Note**: LaTeX source is NOT versioned; compile locally and copy PDF to version directories
+### Syllabus
+- **Source**: LaTeX source lives in the private `social-media-ds-course-internal` repo (`syllabus/` folder)
+- **Deployment**: After building the PDF in the internal repo, copy it here with `make copy-syllabus`
+- **Note**: The `syllabus.pdf` in `versions/<VERSION>/content/` is the deployed artifact; the LaTeX source is not in this repo
 
 ### Demos (`/demos/`)
 - **Purpose**: Master copy of Jupyter notebook demonstrations
@@ -54,29 +52,13 @@ npm run build        # Build for production
 npm run preview      # Preview production build
 ```
 
-### Syllabus Compilation
-```bash
-cd syllabus
-make                 # Compile PDF (recommended)
-make clean          # Remove intermediate files
-make distclean      # Remove all generated files
-make help           # Show available targets
-```
-
-### Alternative LaTeX compilation
-```bash
-cd syllabus
-latexmk -pdf syllabus.tex    # Direct compilation
-pdflatex syllabus.tex        # Manual compilation
-```
-
 ### Version Management
 ```bash
 # Create new semester
 make new-semester SEMESTER=Spring2026
 
-# Copy compiled syllabus to version directory
-make copy-syllabus VERSION=Fall2025
+# Build syllabus PDF in internal repo first, then copy it here:
+make copy-syllabus VERSION=Fall2025 SYLLABUS_PDF=../social-media-ds-course-internal/syllabus/syllabus.pdf
 
 # Validate version configuration
 make validate-versions
@@ -121,9 +103,8 @@ If the `navigation` field is omitted, all tabs are shown by default.
 
 - The frontend dynamically loads content based on the version in the URL
 - Each semester is independent with its own data files and demos
-- The syllabus is compiled locally (not in CI/CD) and manually copied to version directories
+- The syllabus is built in the `social-media-ds-course-internal` repo and the compiled PDF is manually copied to version directories here
 - Bootstrap 5 handles most frontend styling; custom CSS is minimal
-- LaTeX compilation requires a working LaTeX distribution with latexmk
 - Version URLs follow the pattern: `/{version}/` (e.g., `/Fall2025/`, `/Spring2026/`)
 - The root URL (`/`) redirects to the default version specified in `versions/config.json`
 

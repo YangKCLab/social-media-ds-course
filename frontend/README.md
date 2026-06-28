@@ -18,5 +18,5 @@ CS 415/515 Social Media Data Science Pipelines.
 
 ## Notes
 
-- Source of truth for detailed policies remains the LaTeX syllabus in `../syllabus/`.
+- Source of truth for detailed policies is the LaTeX syllabus in the private `social-media-ds-course-internal` repo (`syllabus/` folder); the compiled PDF is served at `versions/<VERSION>/content/syllabus.pdf`.
 - If deploying to GitHub Pages under a subpath, configure `base` in `vite.config.js`.

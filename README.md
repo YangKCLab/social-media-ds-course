@@ -8,7 +8,6 @@ The repository is organized to support multiple semester iterations:
 
 - `frontend/` - Vue.js course website
 - `versions/` - Semester-specific course content (schedule, resources, demos, etc.)
-- `syllabus/` - LaTeX source for course syllabus (compiled locally)
 - `scripts/` - Build and maintenance scripts
 - `demos/` - Master copy of Jupyter notebook demonstrations
 
@@ -40,7 +39,11 @@ make new-semester SEMESTER=Spring2026
 
 # Update versions/config.json with new semester info
 # Edit content files in versions/Spring2026/
-# Copy demos and compile syllabus
+# Copy demos
+
+# Build the syllabus PDF in the internal repo (social-media-ds-course-internal),
+# then copy it here:
+make copy-syllabus VERSION=Spring2026 SYLLABUS_PDF=../social-media-ds-course-internal/syllabus/syllabus.pdf
 
 # Validate configuration
 make validate-versions
