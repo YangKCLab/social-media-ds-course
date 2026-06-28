@@ -1,32 +1,34 @@
 {
-  "defaultVersion": "Fall2025",
+  "defaultVersion": "Fall2026",
   "versions": [
     {
       "id": "Fall2025",
       "displayName": "Fall 2025",
       "path": "Fall2025",
-      "active": true,
+      "active": false,
       "semester": "Fall",
       "year": 2025,
+      "accent": "#4f46e5",
       "navigation": {
-        "home": true,
-        "schedule": true,
-        "resources": true,
-        "staff": true
+        "home": { "enabled": true },
+        "schedule": { "enabled": true },
+        "resources": { "enabled": true },
+        "staff": { "enabled": true }
       }
     },
     {
       "id": "Fall2026",
       "displayName": "Fall 2026",
       "path": "Fall2026",
-      "active": false,
+      "active": true,
       "semester": "Fall",
       "year": 2026,
+      "accent": "#0d9488",
       "navigation": {
-        "home": true,
-        "schedule": true,
-        "resources": false,
-        "staff": true
+        "home": { "enabled": true },
+        "schedule": { "enabled": true, "external": "https://docs.google.com/spreadsheets/d/1ZgBTZ82ZM-bRbtKyLu-75U6cbBrI3TiJ6BEQ1q4Kbho/edit?gid=0#gid=0" },
+        "resources": { "enabled": false },
+        "staff": { "enabled": true }
       }
     }
   ]

@@ -1,7 +1,8 @@
 {
   "semester": "Fall 2026",
-  "classTime": "TBD",
-  "location": "TBD",
+  "classTime": "Mondays & Wednesdays 5:00pm-6:30pm",
+  "location": "Science Library 310",
+  "materialsUrl": "https://yangkclab.github.io/social-media-analysis/",
   "grading": {
     "quizzes": 15,
     "projects": 75,

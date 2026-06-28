@@ -1,25 +1,11 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import { normalizeVersion } from '../composables/useVersion'
+import { loadVersionConfig, resolveDefaultVersion, normalizeNavigation } from '../composables/useConfig'
 
 import HomeWrapper from '../wrappers/HomeWrapper.vue'
 import Schedule from '../pages/Schedule.vue'
 import Resources from '../pages/Resources.vue'
 import Staff from '../pages/Staff.vue'
-
-// Load version config to determine active version
-let configPromise = null
-
-async function loadVersionConfig() {
-  if (!configPromise) {
-    configPromise = fetch(`${import.meta.env.BASE_URL}versions/config.json`)
-      .then(response => response.json())
-      .catch(error => {
-        console.error('Failed to load version config:', error)
-        return { defaultVersion: 'Fall2025', versions: [] }
-      })
-  }
-  return configPromise
-}
 
 export const router = createRouter({
   // Use history mode with Vite base for GH Pages
@@ -53,9 +39,7 @@ router.beforeEach(async (to, _from, next) => {
   // Handle root path redirect
   if (to.path === '/') {
     const config = await loadVersionConfig()
-    const active = config.versions.find(v => v.active === true)
-    const version = active ? active.id : config.defaultVersion
-    next(`/${version}/`)
+    next(`/${resolveDefaultVersion(config)}/`)
     return
   }
 
@@ -68,8 +52,7 @@ router.beforeEach(async (to, _from, next) => {
     // Case 1: Version not found in config → redirect to default version
     if (!canonicalVersion) {
       console.warn(`Unknown version: ${versionParam}, redirecting to default`)
-      const active = config.versions.find(v => v.active === true)
-      const defaultVersion = active ? active.id : config.defaultVersion
+      const defaultVersion = resolveDefaultVersion(config)
       const targetPath = to.path.replace(`/${versionParam}`, `/${defaultVersion}`)
       next(targetPath)
       return
@@ -82,8 +65,23 @@ router.beforeEach(async (to, _from, next) => {
       next(targetPath)
       return
     }
+
+    // Case 3: Disabled or external-only page → redirect to the version home.
+    // A non-home target is reachable only when its nav entry is enabled and is
+    // not an external link. This keeps disabled pages (whose content JSON may be
+    // absent) and externally-routed pages from rendering an in-app load error.
+    if (to.name && to.name !== 'home') {
+      const entry = config.versions.find(v => v.id === canonicalVersion)
+      const nav = normalizeNavigation(entry?.navigation)
+      const navItem = nav[to.name]
+      const reachable = navItem ? navItem.enabled && !navItem.external : true
+      if (!reachable) {
+        next(`/${canonicalVersion}/`)
+        return
+      }
+    }
   }
 
-  // Case 3: Version is already correct or no version param → proceed
+  // Version is already correct and target is reachable → proceed
   next()
 })

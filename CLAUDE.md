@@ -100,16 +100,16 @@ make build-frontend
 - `versions/Fall2025/demos/`: Semester-specific demo notebooks
 - `versions/_template/`: Template for new semesters
 
-**Navigation Configuration**: Each version in `config.json` can optionally specify which navigation tabs to show:
+**Navigation Configuration**: Each version in `config.json` can optionally specify which navigation tabs to show, and whether a tab links to an external URL instead of an internal page. Each entry is an object with `enabled` and an optional `external` URL:
 ```json
 "navigation": {
-  "home": true,
-  "schedule": true,
-  "resources": false,  // Hide Resources tab for this version
-  "staff": true
+  "home": { "enabled": true },
+  "schedule": { "enabled": true, "external": "https://docs.google.com/spreadsheets/..." },
+  "resources": { "enabled": false },  // Hide Resources tab for this version
+  "staff": { "enabled": true }
 }
 ```
-If the `navigation` field is omitted, all tabs are shown by default.
+If the `navigation` field is omitted, all tabs are shown by default. A tab with `enabled: false` or an `external` URL is not routable internally — the router redirects those paths to the version home. When `schedule.external` is set, the Schedule nav item opens that URL in a new tab.
 
 ### Build System
 - `Makefile`: Root-level build targets

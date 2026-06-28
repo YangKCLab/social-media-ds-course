@@ -2,12 +2,12 @@
 import { computed, defineAsyncComponent } from 'vue'
 import { useRoute } from 'vue-router'
 import DefaultHome from '../pages/Home.vue'
+import { EMERGENCY_FALLBACK_VERSION } from '../composables/useConfig'
 
 const route = useRoute()
-const DEFAULT_VERSION = 'Fall2025'
 
 // Compute current version from route
-const version = computed(() => route.params.version || DEFAULT_VERSION)
+const version = computed(() => route.params.version || EMERGENCY_FALLBACK_VERSION)
 
 // Import all version-specific Home components at build time using glob
 // This must use a static pattern - Vite analyzes this at build time
