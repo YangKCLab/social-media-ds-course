@@ -1,5 +1,5 @@
 <script setup>
-import { ref, onMounted, computed } from 'vue'
+import { ref, onMounted, computed, watch } from 'vue'
 import { RouterLink, RouterView, useRoute } from 'vue-router'
 
 const route = useRoute()
@@ -17,6 +17,23 @@ onMounted(async () => {
 })
 
 const currentVersion = computed(() => route.params.version || 'Fall2025')
+
+// Optional external schedule link (e.g. a Google Sheet). Sourced from the
+// version's home.json so the URL lives in one place. When set, the Schedule
+// nav item links out; otherwise it falls back to the internal schedule page.
+const scheduleUrl = ref(null)
+watch(currentVersion, async (version) => {
+  scheduleUrl.value = null
+  if (!version) return
+  try {
+    const response = await fetch(`${import.meta.env.BASE_URL}versions/${version}/content/home.json`)
+    if (response.ok) {
+      scheduleUrl.value = (await response.json()).scheduleUrl || null
+    }
+  } catch (error) {
+    // Ignore and fall back to the internal schedule route.
+  }
+}, { immediate: true })
 
 // Get current version config
 const currentVersionConfig = computed(() => {
@@ -56,7 +73,10 @@ const navigation = computed(() => {
       <nav id="navbarNav" class="collapse navbar-collapse">
         <ul class="navbar-nav ms-auto">
           <li v-if="navigation.home" class="nav-item"><RouterLink class="nav-link" :to="`/${currentVersion}/`">Home</RouterLink></li>
-          <li v-if="navigation.schedule" class="nav-item"><RouterLink class="nav-link" :to="`/${currentVersion}/schedule`">Schedule</RouterLink></li>
+          <li v-if="navigation.schedule" class="nav-item">
+            <a v-if="scheduleUrl" class="nav-link" :href="scheduleUrl" target="_blank" rel="noopener">Schedule</a>
+            <RouterLink v-else class="nav-link" :to="`/${currentVersion}/schedule`">Schedule</RouterLink>
+          </li>
           <li v-if="navigation.resources" class="nav-item"><RouterLink class="nav-link" :to="`/${currentVersion}/resources`">Resources</RouterLink></li>
           <li v-if="navigation.staff" class="nav-item"><RouterLink class="nav-link" :to="`/${currentVersion}/staff`">Staff</RouterLink></li>
           <li v-if="versions.length > 1" class="nav-item dropdown">

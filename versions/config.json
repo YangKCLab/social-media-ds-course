@@ -24,7 +24,7 @@
       "year": 2026,
       "navigation": {
         "home": true,
-        "schedule": false,
+        "schedule": true,
         "resources": true,
         "staff": true
       }
