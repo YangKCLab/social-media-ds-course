@@ -44,21 +44,21 @@ versions/
      "semester": "Spring",
      "year": 2026,
      "navigation": {
-       "home": true,
-       "schedule": true,
-       "resources": false,
-       "staff": true
+       "home": { "enabled": true },
+       "schedule": { "enabled": true },
+       "resources": { "enabled": false },
+       "staff": { "enabled": true }
      }
    }
    ```
 
-   **Note**: The `navigation` field is optional. If omitted, all tabs are shown by default. Set a tab to `false` to hide it for this version.
+   **Note**: The `navigation` field is optional. If omitted, all tabs are shown by default. Each entry is an object: set `"enabled": false` to hide a tab, or add `"external": "https://..."` to link the tab out to an external URL (e.g. a Google Sheet schedule) instead of an internal page. A tab that is disabled or external-only has no internal page, so it does **not** require its `content/*.json` file.
 
 3. Edit the content files in `versions/Spring2026/content/`:
-   - `home.json` - Update semester name, class time, location
-   - `staff.json` - Update instructor and TA information
-   - `schedule.json` - Add course schedule
-   - `resources.json` - Add/update resources
+   - `home.json` - Update semester name, class time, location (always required)
+   - `staff.json` - Update instructor and TA information (if Staff is enabled)
+   - `schedule.json` - Add course schedule (if Schedule is enabled and not external)
+   - `resources.json` - Add/update resources (if Resources is enabled)
 
 4. Copy demo notebooks:
    ```bash
@@ -100,11 +100,13 @@ The default version will be shown when users visit the root URL.
   - `active`: Whether this version is currently active
   - `semester`: Semester name (Fall, Spring, Summer)
   - `year`: Year
-  - `navigation` (optional): Configure which navigation tabs to show
-    - `home`: Show Home tab (default: true)
-    - `schedule`: Show Schedule tab (default: true)
-    - `resources`: Show Resources tab (default: true)
-    - `staff`: Show Staff tab (default: true)
+  - `accent` (optional): Hex color used to tint the navbar/brand for this version
+  - `navigation` (optional): Configure navigation tabs. Each key (`home`,
+    `schedule`, `resources`, `staff`) is an object:
+    - `enabled`: Show the tab (default: true; set `false` to hide)
+    - `external` (optional): URL to link the tab out to instead of an internal
+      page (opens in a new tab). Disabled or external-only tabs require no
+      `content/*.json`.
 
 ### content/home.json
 Semester-specific metadata displayed on the home page:

@@ -1,6 +1,6 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import { normalizeVersion } from '../composables/useVersion'
-import { loadVersionConfig, resolveDefaultVersion } from '../composables/useConfig'
+import { loadVersionConfig, resolveDefaultVersion, normalizeNavigation } from '../composables/useConfig'
 
 import HomeWrapper from '../wrappers/HomeWrapper.vue'
 import Schedule from '../pages/Schedule.vue'
@@ -72,9 +72,9 @@ router.beforeEach(async (to, _from, next) => {
     // absent) and externally-routed pages from rendering an in-app load error.
     if (to.name && to.name !== 'home') {
       const entry = config.versions.find(v => v.id === canonicalVersion)
-      const nav = entry?.navigation || {}
+      const nav = normalizeNavigation(entry?.navigation)
       const navItem = nav[to.name]
-      const reachable = navItem?.enabled !== false && !navItem?.external
+      const reachable = navItem ? navItem.enabled && !navItem.external : true
       if (!reachable) {
         next(`/${canonicalVersion}/`)
         return

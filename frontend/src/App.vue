@@ -1,7 +1,7 @@
 <script setup>
 import { ref, onMounted, computed } from 'vue'
 import { RouterLink, RouterView, useRoute } from 'vue-router'
-import { EMERGENCY_FALLBACK_VERSION, loadVersionConfig } from './composables/useConfig'
+import { EMERGENCY_FALLBACK_VERSION, loadVersionConfig, normalizeNavigation } from './composables/useConfig'
 
 const route = useRoute()
 const versions = ref([])
@@ -23,15 +23,9 @@ const currentVersionConfig = computed(() => {
   return match || {}
 })
 
-// Get navigation settings with defaults
-const navigation = computed(() => {
-  return currentVersionConfig.value.navigation || {
-    home: { enabled: true },
-    schedule: { enabled: true },
-    resources: { enabled: true },
-    staff: { enabled: true }
-  }
-})
+// Get navigation settings, normalized so partial configs get per-tab defaults
+// (and so the navbar and router guard agree on what each entry means).
+const navigation = computed(() => normalizeNavigation(currentVersionConfig.value.navigation))
 
 // Optional external schedule link (e.g. a Google Sheet). Sourced from
 // config.json's navigation.schedule.external so the URL lives in one place.

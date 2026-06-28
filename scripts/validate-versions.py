@@ -6,6 +6,36 @@ import json
 import sys
 from pathlib import Path
 
+# Canonical navigation keys and the content JSON each routed tab requires.
+# `home` is intentionally absent: home.json is always required (semester
+# metadata, not tab-gated).
+NAV_KEYS = ['home', 'schedule', 'resources', 'staff']
+NAV_FILE_MAP = {
+    'schedule': 'schedule.json',
+    'resources': 'resources.json',
+    'staff': 'staff.json',
+}
+
+
+def normalize_navigation(nav):
+    """Python mirror of normalizeNavigation() in
+    frontend/src/composables/useConfig.js — keep the two in sync.
+
+    Returns a dict keyed by NAV_KEYS, each {'enabled': bool, 'external': str|None}.
+    A tab is enabled unless it explicitly sets enabled=false (so absent/partial
+    entries default to visible); 'external' is the URL string or None.
+    """
+    nav = nav or {}
+    result = {}
+    for key in NAV_KEYS:
+        entry = nav.get(key) or {}
+        result[key] = {
+            'enabled': entry.get('enabled') is not False,
+            'external': entry.get('external') or None,
+        }
+    return result
+
+
 def main():
     # Load config
     config_path = Path('versions/config.json')
@@ -16,7 +46,6 @@ def main():
     with open(config_path) as f:
         config = json.load(f)
 
-    required_files = ['schedule.json', 'resources.json', 'staff.json', 'home.json', 'syllabus.pdf']
     errors = []
     warnings = []
 
@@ -45,14 +74,24 @@ def main():
             errors.append(f"Content directory not found: {content_dir}")
             continue
 
-        # Check required files
+        # Required content files are derived from the navigation config:
+        # home.json is always required, and each routed tab's JSON is required
+        # only when that tab is enabled and not an external link (disabled or
+        # external-only tabs have no internal page, so no JSON to validate).
+        nav = normalize_navigation(version.get('navigation'))
+        required_files = ['home.json']
+        for tab, filename in NAV_FILE_MAP.items():
+            if nav[tab]['enabled'] and not nav[tab]['external']:
+                required_files.append(filename)
+
         for required_file in required_files:
             file_path = content_dir / required_file
             if not file_path.exists():
-                if required_file == 'syllabus.pdf':
-                    warnings.append(f"Missing {required_file} in {version_id} (compile locally)")
-                else:
-                    errors.append(f"Missing {required_file} in {version_id}")
+                errors.append(f"Missing {required_file} in {version_id}")
+
+        # syllabus.pdf is compiled/copied manually, so its absence is a warning
+        if not (content_dir / 'syllabus.pdf').exists():
+            warnings.append(f"Missing syllabus.pdf in {version_id} (compile locally)")
 
         # Check demos directory
         demos_dir = version_dir / 'demos'
