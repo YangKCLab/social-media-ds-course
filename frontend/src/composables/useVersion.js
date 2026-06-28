@@ -1,8 +1,6 @@
-import { computed } from 'vue'
+import { computed, ref, watch } from 'vue'
 import { useRoute } from 'vue-router'
-
-// Keep in sync with router default to avoid undefined params during initial mount
-const DEFAULT_VERSION = 'Fall2026'
+import { EMERGENCY_FALLBACK_VERSION, loadVersionConfig } from './useConfig'
 
 /**
  * Normalize version string to canonical case by looking up in config
@@ -39,7 +37,16 @@ export function useVersion() {
   const route = useRoute()
 
   // Get current version from route params
-  const currentVersion = computed(() => route.params.version || DEFAULT_VERSION)
+  const currentVersion = computed(() => route.params.version || EMERGENCY_FALLBACK_VERSION)
+
+  // Reactive config entry for the current version, resolved from the shared
+  // (memoized) config loader. Lets content components read config-owned values
+  // (e.g. the external schedule URL) without their own fetch.
+  const versionConfig = ref(null)
+  watch(currentVersion, async (version) => {
+    const config = await loadVersionConfig()
+    versionConfig.value = config.versions.find(v => v.id === version) || null
+  }, { immediate: true })
 
   /**
    * Load version-specific data file
@@ -47,7 +54,7 @@ export function useVersion() {
    * @returns {Promise<Object>} Parsed JSON data
    */
   const loadVersionData = async (filename) => {
-    const version = currentVersion.value || DEFAULT_VERSION
+    const version = currentVersion.value || EMERGENCY_FALLBACK_VERSION
     const url = `${import.meta.env.BASE_URL}versions/${version}/content/${filename}`
 
     try {
@@ -64,6 +71,7 @@ export function useVersion() {
 
   return {
     currentVersion,
+    versionConfig,
     loadVersionData
   }
 }

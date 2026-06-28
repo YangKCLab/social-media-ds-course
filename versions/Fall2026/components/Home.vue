@@ -16,7 +16,7 @@ import { useVersion } from '../../../frontend/src/composables/useVersion'
 // - Additional sections
 // - Dynamic content from JSON or hardcoded
 
-const { loadVersionData, currentVersion } = useVersion()
+const { loadVersionData, currentVersion, versionConfig } = useVersion()
 const homeData = ref(null)
 
 // Base URL for assets
@@ -24,6 +24,10 @@ const baseUrl = import.meta.env.BASE_URL
 
 // Computed syllabus PDF URL
 const syllabusPdfUrl = computed(() => `${baseUrl}versions/${currentVersion.value}/content/syllabus.pdf`)
+
+// External schedule URL (e.g. a Google Sheet), sourced from config.json so it
+// lives in one place. Null when this version uses the internal schedule page.
+const scheduleUrl = computed(() => versionConfig.value?.navigation?.schedule?.external || null)
 
 onMounted(async () => {
   try {
@@ -68,14 +72,19 @@ onMounted(async () => {
               <li>Location: {{ homeData.location }}</li>
             </ul>
             <a
-              v-if="homeData.scheduleUrl"
+              v-if="scheduleUrl"
               class="btn btn-outline-primary btn-sm"
-              :href="homeData.scheduleUrl"
+              :href="scheduleUrl"
               target="_blank"
               rel="noopener"
             >
               View Schedule
             </a>
+            <RouterLink
+              v-else
+              class="btn btn-outline-primary btn-sm"
+              :to="`/${currentVersion}/schedule`"
+            >View Schedule</RouterLink>
           </div>
         </div>
       </div>
@@ -119,8 +128,8 @@ onMounted(async () => {
       <p>
         There is no textbook for this course.
         Lectures and selected research papers form the core materials.
-        All course materials are hosted on the
-        <a v-if="homeData?.materialsUrl" :href="homeData.materialsUrl" target="_blank" rel="noopener">course materials site</a>.
+        <template v-if="homeData?.materialsUrl">All course materials are hosted on the
+        <a :href="homeData.materialsUrl" target="_blank" rel="noopener">course materials site</a>.</template>
         Paper reading assignments and other course materials will be made available via Brightspace.
       </p>
     </section>
@@ -132,7 +141,10 @@ onMounted(async () => {
         the fundamentals of data science on social media. Reading materials are recent research papers
         aligned with lecture topics.
 
-        Please refer to the <a :href="homeData?.scheduleUrl" target="_blank" rel="noopener">Schedule</a> for the detailed lecture topics and reading materials.
+        Please refer to the
+        <a v-if="scheduleUrl" :href="scheduleUrl" target="_blank" rel="noopener">Schedule</a>
+        <RouterLink v-else :to="`/${currentVersion}/schedule`">Schedule</RouterLink>
+        for the detailed lecture topics and reading materials.
       </p>
       <div class="row g-3">
         <div class="col-md-6">

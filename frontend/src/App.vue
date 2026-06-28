@@ -1,39 +1,18 @@
 <script setup>
-import { ref, onMounted, computed, watch } from 'vue'
+import { ref, onMounted, computed } from 'vue'
 import { RouterLink, RouterView, useRoute } from 'vue-router'
+import { EMERGENCY_FALLBACK_VERSION, loadVersionConfig } from './composables/useConfig'
 
 const route = useRoute()
 const versions = ref([])
 
-// Load available versions from config
+// Load available versions from the shared (memoized) config loader.
 onMounted(async () => {
-  try {
-    const response = await fetch(`${import.meta.env.BASE_URL}versions/config.json`)
-    const config = await response.json()
-    versions.value = config.versions
-  } catch (error) {
-    console.error('Failed to load version config:', error)
-  }
+  const config = await loadVersionConfig()
+  versions.value = config.versions
 })
 
-const currentVersion = computed(() => route.params.version || 'Fall2026')
-
-// Optional external schedule link (e.g. a Google Sheet). Sourced from the
-// version's home.json so the URL lives in one place. When set, the Schedule
-// nav item links out; otherwise it falls back to the internal schedule page.
-const scheduleUrl = ref(null)
-watch(currentVersion, async (version) => {
-  scheduleUrl.value = null
-  if (!version) return
-  try {
-    const response = await fetch(`${import.meta.env.BASE_URL}versions/${version}/content/home.json`)
-    if (response.ok) {
-      scheduleUrl.value = (await response.json()).scheduleUrl || null
-    }
-  } catch (error) {
-    // Ignore and fall back to the internal schedule route.
-  }
-}, { immediate: true })
+const currentVersion = computed(() => route.params.version || EMERGENCY_FALLBACK_VERSION)
 
 // Get current version config
 const currentVersionConfig = computed(() => {
@@ -47,12 +26,18 @@ const currentVersionConfig = computed(() => {
 // Get navigation settings with defaults
 const navigation = computed(() => {
   return currentVersionConfig.value.navigation || {
-    home: true,
-    schedule: true,
-    resources: true,
-    staff: true
+    home: { enabled: true },
+    schedule: { enabled: true },
+    resources: { enabled: true },
+    staff: { enabled: true }
   }
 })
+
+// Optional external schedule link (e.g. a Google Sheet). Sourced from
+// config.json's navigation.schedule.external so the URL lives in one place.
+// When set, the Schedule nav item links out; otherwise it falls back to the
+// internal schedule page.
+const scheduleUrl = computed(() => navigation.value.schedule?.external || null)
 
 // Per-iteration accent color cue. Each version may set an `accent` hex in
 // config.json; it tints the navbar strip, brand, active link, and outline
@@ -79,13 +64,13 @@ const accentColor = computed(() => currentVersionConfig.value.accent || '#0d9488
       </button>
       <nav id="navbarNav" class="collapse navbar-collapse">
         <ul class="navbar-nav ms-auto">
-          <li v-if="navigation.home" class="nav-item"><RouterLink class="nav-link" :to="`/${currentVersion}/`">Home</RouterLink></li>
-          <li v-if="navigation.schedule" class="nav-item">
+          <li v-if="navigation.home?.enabled" class="nav-item"><RouterLink class="nav-link" :to="`/${currentVersion}/`">Home</RouterLink></li>
+          <li v-if="navigation.schedule?.enabled" class="nav-item">
             <a v-if="scheduleUrl" class="nav-link" :href="scheduleUrl" target="_blank" rel="noopener">Schedule</a>
             <RouterLink v-else class="nav-link" :to="`/${currentVersion}/schedule`">Schedule</RouterLink>
           </li>
-          <li v-if="navigation.resources" class="nav-item"><RouterLink class="nav-link" :to="`/${currentVersion}/resources`">Resources</RouterLink></li>
-          <li v-if="navigation.staff" class="nav-item"><RouterLink class="nav-link" :to="`/${currentVersion}/staff`">Staff</RouterLink></li>
+          <li v-if="navigation.resources?.enabled" class="nav-item"><RouterLink class="nav-link" :to="`/${currentVersion}/resources`">Resources</RouterLink></li>
+          <li v-if="navigation.staff?.enabled" class="nav-item"><RouterLink class="nav-link" :to="`/${currentVersion}/staff`">Staff</RouterLink></li>
           <li v-if="versions.length > 1" class="nav-item dropdown">
             <a
               class="nav-link dropdown-toggle"
