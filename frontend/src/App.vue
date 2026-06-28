@@ -16,7 +16,7 @@ onMounted(async () => {
   }
 })
 
-const currentVersion = computed(() => route.params.version || 'Fall2025')
+const currentVersion = computed(() => route.params.version || 'Fall2026')
 
 // Optional external schedule link (e.g. a Google Sheet). Sourced from the
 // version's home.json so the URL lives in one place. When set, the Schedule

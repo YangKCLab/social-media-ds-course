@@ -4,7 +4,7 @@ import { useRoute } from 'vue-router'
 import DefaultHome from '../pages/Home.vue'
 
 const route = useRoute()
-const DEFAULT_VERSION = 'Fall2025'
+const DEFAULT_VERSION = 'Fall2026'
 
 // Compute current version from route
 const version = computed(() => route.params.version || DEFAULT_VERSION)

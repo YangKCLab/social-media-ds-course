@@ -2,7 +2,7 @@ import { computed } from 'vue'
 import { useRoute } from 'vue-router'
 
 // Keep in sync with router default to avoid undefined params during initial mount
-const DEFAULT_VERSION = 'Fall2025'
+const DEFAULT_VERSION = 'Fall2026'
 
 /**
  * Normalize version string to canonical case by looking up in config

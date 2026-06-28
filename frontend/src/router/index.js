@@ -15,7 +15,7 @@ async function loadVersionConfig() {
       .then(response => response.json())
       .catch(error => {
         console.error('Failed to load version config:', error)
-        return { defaultVersion: 'Fall2025', versions: [] }
+        return { defaultVersion: 'Fall2026', versions: [] }
       })
   }
   return configPromise
