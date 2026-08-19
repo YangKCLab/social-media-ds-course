@@ -56,7 +56,8 @@ onMounted(async () => {
       <p class="lead" id="description">
         The focus of this course is on applying data science techniques to large-scale social media.
         Topics include data collection and management, exploratory analysis and measurement techniques,
-        data visualization, hypothesis testing and statistical modeling, and real-time analytics. Students
+        network analysis, data visualization, hypothesis testing and statistical modeling, and real-time
+        analytics. Students
         will build an end-to-end pipeline and use it to answer questions about online events as they occur.
       </p>
     </section>
@@ -130,7 +131,9 @@ onMounted(async () => {
         Lectures and selected research papers form the core materials.
         <template v-if="homeData?.materialsUrl">All course materials are hosted on the
         <a :href="homeData.materialsUrl" target="_blank" rel="noopener">course materials site</a>.</template>
-        Paper reading assignments and other course materials will be made available via Brightspace.
+        Paper reading assignments are listed on the course schedule.
+        Lecture slides and other course materials are shared via the course Google Drive folder.
+        Brightspace carries official course announcements and grades.
       </p>
     </section>
 
@@ -157,7 +160,8 @@ onMounted(async () => {
                 <li>Social media data formats</li>
                 <li>Data management with RDBMS/NoSQL</li>
                 <li>Probability and statistics; hypothesis testing</li>
-                <li>Applications of Machine Learning</li>
+                <li>Network analysis</li>
+                <li>Applications of Machine Learning and generative AI</li>
                 <li>Visualization</li>
               </ul>
             </div>
@@ -173,6 +177,7 @@ onMounted(async () => {
                 <li>Inauthentic behaviors</li>
                 <li>Ethics and data access</li>
                 <li>Generative AI and social media</li>
+                <li>Social media of AI agents</li>
               </ul>
             </div>
           </div>
@@ -193,7 +198,7 @@ onMounted(async () => {
     <section v-if="homeData" class="mb-5">
       <h3 id="grading">Method of Assessment</h3>
       <ul>
-        <li>Paper reading quizzes: {{ homeData.grading.quizzes }}%</li>
+        <li>Paper reading reflections and quizzes: {{ homeData.grading.quizzes }}%</li>
         <li>Three programming projects: {{ homeData.grading.projects }}% (evenly split)</li>
         <li>Final demonstration: {{ homeData.grading.demo }}%</li>
       </ul>
