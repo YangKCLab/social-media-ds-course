@@ -6,5 +6,16 @@
     "office": "G06A, Engineering Building",
     "officeHours": "Wednesday 2:30pm - 4:30pm, by appointment"
   },
-  "tas": []
+  "tas": [
+    {
+      "name": "Smriti Janaswamy",
+      "email": "sjanasw1@binghamton.edu",
+      "officeHours": "To be announced"
+    },
+    {
+      "name": "Praneeth Purini",
+      "email": "ppurini@binghamton.edu",
+      "officeHours": "Tuesday & Thursday 12:00pm - 1:00pm"
+    }
+  ]
 }
