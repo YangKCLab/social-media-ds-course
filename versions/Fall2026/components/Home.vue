@@ -198,7 +198,8 @@ onMounted(async () => {
     <section v-if="homeData" class="mb-5">
       <h3 id="grading">Method of Assessment</h3>
       <ul>
-        <li>Paper reading reflections and quizzes: {{ homeData.grading.quizzes }}%</li>
+        <li>{{ homeData.grading.quizzesLabel || 'Paper reading reflections and quizzes' }}: {{ homeData.grading.quizzes }}%</li>
+        <li v-if="homeData.grading.midterm">Midterm exam: {{ homeData.grading.midterm }}%</li>
         <li>Three programming projects: {{ homeData.grading.projects }}% (evenly split)</li>
         <li>Final demonstration: {{ homeData.grading.demo }}%</li>
       </ul>

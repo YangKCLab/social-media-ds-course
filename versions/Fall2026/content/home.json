@@ -4,8 +4,10 @@
   "location": "Science Library 310",
   "materialsUrl": "https://yangkclab.github.io/social-media-analysis/",
   "grading": {
+    "quizzesLabel": "Reflections and quizzes",
     "quizzes": 15,
-    "projects": 75,
+    "midterm": 15,
+    "projects": 60,
     "demo": 10
   },
   "gradingScale": {
