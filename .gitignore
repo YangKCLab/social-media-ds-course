@@ -405,3 +405,6 @@ __marimo__/
 .DS_Store
 # Frontend development symlink
 frontend/public/versions
+
+# Data file that the stats notebooks download on the first run
+demos/stats/data/
