@@ -411,3 +411,6 @@ demos/stats/data/
 
 # Data files that the network notebooks download or write on the first run
 demos/network/data/
+
+# Figure files that the visualization notebooks save on a run
+demos/data_vis/output/
